@@ -1,5 +1,27 @@
 # KerjaBaik Website Changelog
 
+## v4.0.0 – 2025-09-06
+
+### Ditambahkan - Halaman Contact
+
+- File baru `contact.html` dengan struktur lengkap:
+  - Navbar konsisten (3 menu utama: Services, About Us, Blog).
+  - Hero section dengan background image + overlay + animasi AOS.
+  - Contact Info section (alamat, email, WhatsApp) + Google Maps embed.
+  - Contact Form modern (input rounded, focus glow, tombol gradient).
+  - CTA WhatsApp section dengan tombol direct chat.
+  - Footer konsisten dengan halaman lain.
+
+### Diperbarui
+
+- Konsistensi layout & animasi di semua halaman (Services, About, Contact).
+- Penyesuaian warna aksen agar seragam antar halaman.
+
+### Catatan
+
+- Semua halaman utama (Home, Services, About, Contact) sudah selesai.
+- Target berikutnya: `blog.html`.
+
 ## v3.0.0 – 2025-09-06
 
 ### Ditambahkan - Halaman About

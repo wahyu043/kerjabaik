@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact – KerjaBaik</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lucide Icon -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Navbar Style -->
+    <style>
+      .kb-link {
+        @apply text-gray-700 hover:text-gray-900 relative;
+      }
+      .kb-link::after {
+        content: "";
+        @apply absolute -bottom-2 left-0 h-[2px] w-0 bg-gray-900 transition-all;
+      }
+      .kb-link:hover::after {
+        @apply w-full;
+      }
+      .kb-mob {
+        @apply block px-3 py-2 rounded-lg text-gray-800 hover:bg-gray-100;
+      }
+    </style>
+  </head>
+
+  <body class="font-[Montserrat Alternates]">
+    <!-- Navbar -->
+    <nav
+      class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-200"
+    >
+      <div class="max-w-7xl mx-auto h-16 px-4 md:px-6 flex items-center">
+        <!-- Left: Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="img/logo-kerjabaik.png"
+            alt="KerjaBaik"
+            class="h-8 w-8 rounded"
+          />
+          <span class="font-semibold tracking-tight text-gray-900"
+            >KerjaBaik</span
+          >
+        </a>
+
+        <!-- Center: Menu -->
+        <ul class="hidden md:flex flex-1 justify-center items-center gap-8">
+          <li><a href="services.html" class="kb-link">Services</a></li>
+          <li><a href="about.html" class="kb-link">About Us</a></li>
+          <li><a href="blog.html" class="kb-link">Blog</a></li>
+        </ul>
+
+        <!-- Right: CTA -->
+        <div class="ml-auto hidden md:flex items-center gap-3">
+          <a
+            href="contact.html"
+            class="group inline-flex items-center gap-2 pl-5 pr-3 py-2 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition"
+          >
+            <span>Contact us</span>
+            <span
+              class="grid place-items-center h-8 w-8 rounded-full bg-white/15 group-hover:bg-white/20 transition"
+            >
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </span>
+          </a>
+        </div>
+
+        <!-- Mobile burger -->
+        <button
+          id="kb-burger"
+          class="block md:hidden ml-auto p-2 rounded-lg hover:bg-gray-100"
+        >
+          <i data-lucide="menu" class="h-6 w-6 text-gray-800"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Contact -->
+    <section
+      class="relative h-[70vh] flex items-center justify-center bg-neutral-900 text-white"
+    >
+      <!-- Background image + overlay -->
+      <div class="absolute inset-0 z-0">
+        <div
+          class="absolute inset-0 bg-center bg-cover"
+          style="background-image: url(&quot;img/contact-us-bg.png&quot;)"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"
+        ></div>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 mx-auto max-w-4xl px-6 text-center"
+        data-aos="fade-up"
+      >
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+          Get in Touch
+        </h1>
+        <p class="mt-4 text-lg md:text-xl text-white/80 max-w-2xl mx-auto">
+          We’d love to hear from you! Whether you have a question, want to
+          collaborate, or simply say hello — reach out and let’s start the
+          conversation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Info + Map -->
+    <section class="relative bg-white py-24">
+      <div
+        class="mx-auto max-w-7xl px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-start"
+      >
+        <!-- Left: Info kontak -->
+        <div class="space-y-10" data-aos="fade-right">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            Contact Information
+          </h2>
+
+          <!-- Address -->
+          <div class="flex items-start gap-4">
+            <div
+              class="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white shadow-md"
+            >
+              <i data-lucide="map-pin" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Address</h3>
+              <p class="text-gray-600 text-sm">Jl. Contoh No.123, Yogyakarta</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-start gap-4">
+            <div
+              class="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white shadow-md"
+            >
+              <i data-lucide="mail" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">Email</h3>
+              <a
+                href="mailto:info@kerjabaik.com"
+                class="text-sm text-blue-600 hover:underline"
+                >info@kerjabaik.com</a
+              >
+            </div>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="flex items-start gap-4">
+            <div
+              class="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white shadow-md"
+            >
+              <i data-lucide="phone" class="h-6 w-6"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-gray-900">WhatsApp</h3>
+              <a
+                href="https://wa.me/6282225096269"
+                target="_blank"
+                class="text-sm text-blue-600 hover:underline"
+                >+62 822-2509-6269</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Map -->
+        <div class="rounded-2xl overflow-hidden shadow-lg" data-aos="fade-left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9394446!2d110.366749!3d-7.810187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57e7f1!2sYogyakarta!5e0!3m2!1sen!2sid!4v1694690567890!5m2!1sen!2sid"
+            width="100%"
+            height="400"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="relative bg-neutral-50 py-24">
+      <div class="mx-auto max-w-3xl px-6" data-aos="fade-up">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+            Send us a message
+          </h2>
+          <p class="mt-4 text-gray-600">
+            Have questions or ideas? Fill out the form below and our team will
+            get back to you shortly.
+          </p>
+        </div>
+
+        <form action="#" method="POST" class="space-y-6">
+          <!-- Name -->
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700"
+              >Your Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="mt-2 block w-full rounded-xl border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-300/50"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700"
+              >Email Address</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="mt-2 block w-full rounded-xl border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-300/50"
+              placeholder="you@example.com"
+            />
+          </div>
+
+          <!-- Subject -->
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-700"
+              >Subject</label
+            >
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="mt-2 block w-full rounded-xl border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-300/50"
+              placeholder="Subject of your message"
+            />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="mt-2 block w-full rounded-xl border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-300/50"
+              placeholder="Write your message..."
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button
+              type="submit"
+              class="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold shadow-md hover:opacity-90 transition"
+            >
+              Send Message
+              <i data-lucide="send" class="h-5 w-5"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- CTA WhatsApp -->
+    <section class="relative bg-neutral-900 py-24 text-white text-center">
+      <div class="mx-auto max-w-3xl px-6" data-aos="zoom-in">
+        <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
+          Ready to collaborate with KerjaBaik?
+        </h2>
+        <p class="text-lg text-white/70 mb-10">
+          Connect with us on WhatsApp and start your journey toward growth and
+          transformation today.
+        </p>
+        <a
+          href="https://wa.me/6282225096269"
+          target="_blank"
+          class="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold text-lg shadow-lg hover:opacity-90 transition"
+        >
+          <i data-lucide="message-circle" class="h-6 w-6"></i>
+          Chat via WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-neutral-950 text-white pt-16 pb-8">
+      <div
+        class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 grid md:grid-cols-4 gap-12"
+      >
+        <!-- Logo & tagline -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <img
+              src="img/logo-kerjabaik.png"
+              alt="KerjaBaik"
+              class="h-8 w-8 rounded"
+            />
+            <span class="font-semibold tracking-tight text-white"
+              >KerjaBaik</span
+            >
+          </a>
+          <p class="text-sm text-white/60">
+            Delivering training & consulting solutions that empower people and
+            organizations to thrive.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>
+              <a href="services.html" class="hover:text-white">Services</a>
+            </li>
+            <li><a href="about.html" class="hover:text-white">About Us</a></li>
+            <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><span class="block">Jl. Contoh No.123, Yogyakarta</span></li>
+            <li>
+              <a href="mailto:info@kerjabaik.com" class="hover:text-white"
+                >info@kerjabaik.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://wa.me/6282225096269"
+                target="_blank"
+                class="hover:text-white"
+                >+62 822-2509-6269</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social icons -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Follow us</h4>
+          <div class="flex gap-4">
+            <a
+              href="#"
+              class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white hover:text-neutral-900 transition"
+              aria-label="LinkedIn"
+            >
+              <i data-lucide="linkedin" class="h-5 w-5"></i>
+            </a>
+            <a
+              href="#"
+              class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white hover:text-neutral-900 transition"
+              aria-label="Instagram"
+            >
+              <i data-lucide="instagram" class="h-5 w-5"></i>
+            </a>
+            <a
+              href="#"
+              class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white hover:text-neutral-900 transition"
+              aria-label="Twitter"
+            >
+              <i data-lucide="twitter" class="h-5 w-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="mt-12 border-t border-white/10 pt-6 text-center text-sm text-white/50"
+      >
+        © <span id="year"></span> KerjaBaik. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      lucide.createIcons();
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
