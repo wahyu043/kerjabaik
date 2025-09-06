@@ -12,7 +12,10 @@
       rel="stylesheet"
     />
 
-    <!-- tiny CSS helpers -->
+    <!-- Lucide Icon -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Navbar Style -->
     <style>
       .kb-link {
         @apply text-gray-700 hover:text-gray-900 relative;
@@ -53,7 +56,7 @@
 
         <!-- Center: Menu -->
         <ul class="hidden md:flex flex-1 justify-center items-center gap-8">
-          <li><a href="#" class="kb-link">Services</a></li>
+          <li><a href="services.html" class="kb-link">Services</a></li>
           <li><a href="#" class="kb-link">About us</a></li>
           <li><a href="#" class="kb-link">Blog</a></li>
         </ul>
@@ -679,7 +682,7 @@
       <div
         class="mt-12 border-t border-white/10 pt-6 text-center text-sm text-white/50"
       >
-        © 2025 KerjaBaik. All rights reserved.
+        © <span id="year"></span> KerjaBaik. All rights reserved.
       </div>
     </footer>
 
@@ -712,6 +715,11 @@
       const b = document.getElementById("kb-burger");
       const d = document.getElementById("kb-drawer");
       b?.addEventListener("click", () => d.classList.toggle("hidden"));
+    </script>
+
+    <!-- JS for dynamic year -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

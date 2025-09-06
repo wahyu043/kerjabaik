@@ -1,3 +1,30 @@
+# KerjaBaik Website Changelog
+
+## v2.0.0 – Halaman Services
+
+### Ditambahkan
+
+- File baru `services.html` dengan struktur lengkap:
+  - Navbar (konsisten dengan homepage).
+  - Hero section dengan background image.
+  - Intro section berisi overview layanan.
+  - Core Services grid (Training, Consulting, Coaching, Digital Learning).
+  - Key Training Topics dengan gaya divider + gambar sticky di kanan.
+  - Delivery Models dalam bentuk box interaktif (hover menampilkan gambar + deskripsi) dengan ikon Lucide.
+  - CTA section dengan tombol solid yang lebih menonjol.
+  - Footer dengan tahun otomatis update.
+
+### Diperbarui
+
+- Penggunaan ikon konsisten dengan **Lucide** (di-set global).
+- Tombol CTA didesain ulang agar lebih kuat secara visual.
+- Copywriting di beberapa section disesuaikan untuk nada bahasa yang lebih profesional/enterprise.
+
+### Catatan
+
+- Halaman Services sudah selesai dan siap digunakan.
+- Target berikutnya: `about.html` (cerita perusahaan, founder, visi & misi, serta tim).
+
 ## [v1.0.0] – 2025-09-06
 
 ### 🚀 Homepage KerjaBaik (Eleks Vibes, Tailwind)

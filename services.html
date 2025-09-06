@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Services – KerjaBaik</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lucide Icon -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Navbar Style -->
+    <style>
+      .kb-link {
+        @apply text-gray-700 hover:text-gray-900 relative;
+      }
+      .kb-link::after {
+        content: "";
+        @apply absolute -bottom-2 left-0 h-[2px] w-0 bg-gray-900 transition-all;
+      }
+      .kb-link:hover::after {
+        @apply w-full;
+      }
+      .kb-mob {
+        @apply block px-3 py-2 rounded-lg text-gray-800 hover:bg-gray-100;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-200"
+    >
+      <div class="max-w-7xl mx-auto h-16 px-4 md:px-6 flex items-center">
+        <!-- Left: Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="img/logo-kerjabaik.png"
+            alt="KerjaBaik"
+            class="h-8 w-8 rounded"
+          />
+          <span class="font-semibold tracking-tight text-gray-900"
+            >KerjaBaik</span
+          >
+        </a>
+
+        <!-- Center: Menu -->
+        <ul class="hidden md:flex flex-1 justify-center items-center gap-8">
+          <li><a href="services.html" class="kb-link">Services</a></li>
+          <li><a href="about.html" class="kb-link">About us</a></li>
+          <li><a href="blog.html" class="kb-link">Blog</a></li>
+        </ul>
+
+        <!-- Right: Language + CTA -->
+        <div class="ml-auto hidden md:flex items-center gap-3">
+          <button
+            class="px-3 py-1.5 rounded-full border border-gray-300 text-sm text-gray-700 hover:bg-gray-50"
+          >
+            EN <span class="opacity-40">|</span> ID
+          </button>
+          <a
+            href="contact.html"
+            class="group inline-flex items-center gap-2 pl-5 pr-3 py-2 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition"
+          >
+            <span>Contact us</span>
+            <span
+              class="grid place-items-center h-8 w-8 rounded-full bg-white/15 group-hover:bg-white/20 transition"
+            >
+              <svg
+                class="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- Mobile burger -->
+        <button
+          id="kb-burger"
+          class="block md:hidden ml-auto p-2 rounded-lg hover:bg-gray-100"
+        >
+          <svg
+            class="h-6 w-6 text-gray-800"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              stroke-width="2"
+              stroke-linecap="round"
+              d="M4 7h16M4 12h16M4 17h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Services -->
+    <section
+      class="relative h-[70vh] flex items-center bg-neutral-900 text-white"
+    >
+      <!-- Background image + overlay -->
+      <div class="absolute inset-0 z-0">
+        <div
+          class="absolute inset-0 bg-center bg-cover"
+          style="background-image: url(&quot;img/slide 1.jpg&quot;)"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"
+        ></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Our Services
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-white/80">
+          Tailored training, consulting, and coaching solutions designed to help
+          individuals and organizations grow in a changing world.
+        </p>
+      </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="relative bg-white py-20">
+      <div class="mx-auto max-w-4xl px-6 text-center">
+        <p class="mt-6 text-lg text-gray-600">
+          KerjaBaik delivers
+          <span class="font-semibold"
+            >personalized and cutting-edge training & consulting</span
+          >, carefully designed to meet the unique needs of individuals and
+          organizations. We believe that an innovative, effective, and
+          easy-to-understand approach is the key to helping you unlock your
+          maximum potential.
+        </p>
+      </div>
+    </section>
+
+    <!-- Core Services Section -->
+    <section class="relative bg-neutral-50 py-24">
+      <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+        <div class="max-w-3xl mb-14 text-center mx-auto">
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-900">
+            Core Services
+          </h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Four pillars of our service offerings designed to empower growth and
+            transformation.
+          </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <div
+            class="group rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition"
+          >
+            <div
+              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
+            >
+              📚
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Training & Workshop
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Interactive sessions tailored to enhance skills and knowledge
+              across industries.
+            </p>
+          </div>
+
+          <div
+            class="group rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition"
+          >
+            <div
+              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
+            >
+              💼
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Consulting</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Strategic solutions blending data-driven insights with
+              human-centered facilitation.
+            </p>
+          </div>
+
+          <div
+            class="group rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition"
+          >
+            <div
+              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
+            >
+              🎯
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Coaching & Mentoring
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Personalized guidance to strengthen leadership and drive
+              measurable impact.
+            </p>
+          </div>
+
+          <div
+            class="group rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition"
+          >
+            <div
+              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
+            >
+              🌐
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+              Digital Learning
+            </h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Scalable e-learning experiences built for hybrid and remote-first
+              organizations.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Training Topics Section -->
+    <section class="relative bg-white py-24">
+      <div
+        class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 grid md:grid-cols-2 gap-12 items-start"
+      >
+        <!-- Left: topics list -->
+        <div>
+          <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
+            Key Training Topics
+          </h2>
+          <p class="text-lg text-gray-600 mb-10">
+            Our programs cover a wide range of topics to address today’s
+            workplace challenges.
+          </p>
+
+          <div class="space-y-10">
+            <!-- Item 1 -->
+            <div class="relative pl-12">
+              <span
+                class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 bg-white"
+                >→</span
+              >
+              <h3 class="font-semibold text-gray-900 mb-2">
+                Work Motivation & Performance
+              </h3>
+              <p class="text-sm text-gray-600">
+                Boosting productivity and aligning goals with organizational
+                vision.
+              </p>
+              <div class="mt-4 h-px w-full bg-gray-200"></div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="relative pl-12">
+              <span
+                class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 bg-white"
+                >→</span
+              >
+              <h3 class="font-semibold text-gray-900 mb-2">
+                Interpersonal & Communication Skills
+              </h3>
+              <p class="text-sm text-gray-600">
+                Enhancing collaboration, empathy, and effective communication at
+                work.
+              </p>
+              <div class="mt-4 h-px w-full bg-gray-200"></div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="relative pl-12">
+              <span
+                class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 bg-white"
+                >→</span
+              >
+              <h3 class="font-semibold text-gray-900 mb-2">
+                Time & Stress Management
+              </h3>
+              <p class="text-sm text-gray-600">
+                Practical strategies for managing workload and building
+                resilience.
+              </p>
+              <div class="mt-4 h-px w-full bg-gray-200"></div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="relative pl-12">
+              <span
+                class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 bg-white"
+                >→</span
+              >
+              <h3 class="font-semibold text-gray-900 mb-2">
+                Leadership & Career Development
+              </h3>
+              <p class="text-sm text-gray-600">
+                Cultivating future leaders and supporting career growth
+                pathways.
+              </p>
+              <div class="mt-4 h-px w-full bg-gray-200"></div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="relative pl-12">
+              <span
+                class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 bg-white"
+                >→</span
+              >
+              <h3 class="font-semibold text-gray-900 mb-2">
+                Innovation & Business Strategy
+              </h3>
+              <p class="text-sm text-gray-600">
+                Designing creative solutions and fostering entrepreneurial
+                thinking.
+              </p>
+              <div class="mt-4 h-px w-full bg-gray-200"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: sticky image -->
+        <div class="sticky top-24 self-start">
+          <img
+            src="img/Cara-Presentasi.webp"
+            alt="Training illustration"
+            class="rounded-2xl shadow-md w-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery Models Section -->
+    <section class="relative bg-neutral-900 py-24 text-white">
+      <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+        <div class="max-w-3xl mb-14 text-center mx-auto">
+          <h2 class="text-2xl md:text-4xl font-bold">Explore Our Models</h2>
+          <p class="mt-4 text-lg text-white/70">
+            Flexible formats to match your needs—whether for individuals, teams,
+            or organizations.
+          </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Box 1 -->
+          <div class="relative group overflow-hidden bg-neutral-800 h-64">
+            <!-- Default -->
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 group-hover:opacity-0"
+            >
+              <i data-lucide="user" class="w-10 h-10 mb-3 text-gray-300"></i>
+              <h3 class="text-lg font-semibold">Personal Coaching</h3>
+            </div>
+            <!-- Hover -->
+            <div
+              class="absolute inset-0 bg-cover bg-center opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700"
+              style="
+                background-image: url(&quot;img/personal-coaching.jpg&quot;);
+              "
+            >
+              <div class="absolute inset-0 bg-black/60"></div>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center text-center p-4"
+              >
+                <h3 class="text-lg font-semibold mb-2">Personal Coaching</h3>
+                <p class="text-sm text-white/80">
+                  One-on-one sessions tailored to individual growth and personal
+                  goals.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Box 2 -->
+          <div class="relative group overflow-hidden bg-neutral-800 h-64">
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 group-hover:opacity-0"
+            >
+              <i data-lucide="users" class="w-10 h-10 mb-3 text-gray-300"></i>
+              <h3 class="text-lg font-semibold">Group Training</h3>
+            </div>
+            <div
+              class="absolute inset-0 bg-cover bg-center opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700"
+              style="background-image: url(&quot;img/group-training.png&quot;)"
+            >
+              <div class="absolute inset-0 bg-black/60"></div>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center text-center p-4"
+              >
+                <h3 class="text-lg font-semibold mb-2">Group Training</h3>
+                <p class="text-sm text-white/80">
+                  Workshops designed for collective learning and collaboration.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Box 3 -->
+          <div class="relative group overflow-hidden bg-neutral-800 h-64">
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 group-hover:opacity-0"
+            >
+              <i data-lucide="edit-3" class="w-10 h-10 mb-3 text-gray-300"></i>
+              <h3 class="text-lg font-semibold">Individual Consulting</h3>
+            </div>
+            <div
+              class="absolute inset-0 bg-cover bg-center opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700"
+              style="
+                background-image: url(&quot;img/individual coaching.jpg&quot;);
+              "
+            >
+              <div class="absolute inset-0 bg-black/60"></div>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center text-center p-4"
+              >
+                <h3 class="text-lg font-semibold mb-2">
+                  Individual Consulting
+                </h3>
+                <p class="text-sm text-white/80">
+                  Tailored strategies and insights for professionals seeking
+                  solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Box 4 -->
+          <div class="relative group overflow-hidden bg-neutral-800 h-64">
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 group-hover:opacity-0"
+            >
+              <i
+                data-lucide="users-round"
+                class="w-10 h-10 mb-3 text-gray-300"
+              ></i>
+              <h3 class="text-lg font-semibold">Team Consulting</h3>
+            </div>
+            <div
+              class="absolute inset-0 bg-cover bg-center opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700"
+              style="background-image: url(&quot;img/team-consulting.jpg&quot;)"
+            >
+              <div class="absolute inset-0 bg-black/60"></div>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center text-center p-4"
+              >
+                <h3 class="text-lg font-semibold mb-2">Team Consulting</h3>
+                <p class="text-sm text-white/80">
+                  Sessions that strengthen team dynamics and drive performance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative bg-white-900 py-24 text-white text-center">
+      <div class="mx-auto max-w-3xl px-5 md:px-8">
+        <h2
+          class="text-3xl text-black md:text-5xl font-extrabold leading-tight mb-6"
+        >
+          Let’s design the right program for you
+        </h2>
+        <p class="text-lg text-black/80 mb-10">
+          Whether you’re building stronger teams, developing leaders, or scaling
+          innovation — KerjaBaik is ready to craft solutions that make real
+          impact.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-flex items-center gap-2 rounded-full bg-neutral-900 text-whiteq px-8 py-4 text-base md:text-lg font-semibold transition hover:bg-neutral-100 hover:text-black"
+        >
+          Get Started Today
+          <span
+            class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 text-white"
+            >→</span
+          >
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-neutral-950 text-white pt-16 pb-8">
+      <div
+        class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 grid md:grid-cols-4 gap-12"
+      >
+        <!-- Logo & tagline -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <img
+              src="img/logo-kerjabaik.png"
+              alt="KerjaBaik"
+              class="h-8 w-8 rounded"
+            />
+            <span class="font-semibold tracking-tight text-white"
+              >KerjaBaik</span
+            >
+          </a>
+          <p class="text-sm text-white/60">
+            Delivering training & consulting solutions that empower people and
+            organizations to thrive.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>
+              <a href="services.html" class="hover:text-white">Services</a>
+            </li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><span class="block">Jl. Contoh No.123, Yogyakarta</span></li>
+            <li>
+              <a href="mailto:info@kerjabaik.com" class="hover:text-white"
+                >info@kerjabaik.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://wa.me/6282225096269"
+                target="_blank"
+                class="hover:text-white"
+                >+62 822-2509-6269</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social icons -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Follow us</h4>
+          <div class="flex gap-4">
+            <a
+              href="#"
+              class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white hover:text-neutral-900 transition"
+              aria-label="LinkedIn"
+            >
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.7v2.16h.05c.52-.98 1.8-2.16 3.7-2.16 3.95 0 4.7 2.6 4.7 6V24h-4v-7.75c0-1.85-.03-4.25-2.6-4.25-2.6 0-3 2.03-3 4.1V24h-4V8z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white hover:text-neutral-900 transition"
+              aria-label="Instagram"
+            >
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm4.5 3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 9zm5-3a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white hover:text-neutral-900 transition"
+              aria-label="Twitter"
+            >
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.954 4.569c-.885.389-1.83.654-2.825.775 
+                        1.014-.611 1.794-1.574 2.163-2.724-.951.564-2.005.974-3.127 
+                        1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 
+                        0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-.422.722-.666 
+                        1.561-.666 2.475 0 1.708.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616 
+                        v.061c0 2.385 1.693 4.374 4.169 4.827-.413.111-.849.171-1.296.171-.314 
+                        0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-2.07 
+                        1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.209 7.548 
+                        2.209 9.142 0 14.307-7.721 13.995-14.646.962-.689 1.797-1.56 2.457-2.549z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="mt-12 border-t border-white/10 pt-6 text-center text-sm text-white/50"
+      >
+        © <span id="year"></span> KerjaBaik. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- JS Lucide -->
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <!-- JS for dynamic year -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
