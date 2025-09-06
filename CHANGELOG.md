@@ -1,8 +1,33 @@
 # KerjaBaik Website Changelog
 
-## v2.0.0 – Halaman Services
+## v3.0.0 – 2025-09-06
 
-### Ditambahkan
+### Ditambahkan - Halaman About
+
+- File baru `about.html` dengan struktur lengkap:
+  - Navbar konsisten dengan homepage & services.
+  - Hero section dengan background image + overlay.
+  - Company Story section dengan layout 2 kolom (image + narasi sejarah).
+  - Founder Highlight section (profil Cahya Maulana) dengan layout berganti arah.
+  - Vision & Mission section dengan background dark elegan + icon list.
+  - Our Team section dengan grid interaktif (hover + animasi).
+  - CTA section yang lebih menonjol dengan gradient accent & efek hover.
+  - Footer konsisten dengan halaman lain.
+
+### Diperbarui
+
+- Penambahan animasi scroll (AOS) di seluruh section.
+- Variasi warna antar section untuk menghindari monoton (white → neutral → dark → white).
+- Penambahan efek hover interaktif pada gambar & team cards.
+
+### Catatan
+
+- Halaman About sudah selesai dan siap digunakan.
+- Target berikutnya: `contact.html` (form, maps, dan detail kontak).
+
+## v2.0.0 – 2025-09-06
+
+### Ditambahkan - Halaman Services
 
 - File baru `services.html` dengan struktur lengkap:
   - Navbar (konsisten dengan homepage).
@@ -25,7 +50,7 @@
 - Halaman Services sudah selesai dan siap digunakan.
 - Target berikutnya: `about.html` (cerita perusahaan, founder, visi & misi, serta tim).
 
-## [v1.0.0] – 2025-09-06
+## [v1.0.0] – 2025-09-03
 
 ### 🚀 Homepage KerjaBaik (Eleks Vibes, Tailwind)
 

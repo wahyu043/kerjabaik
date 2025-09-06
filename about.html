@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>About – KerjaBaik</title>
+    <link href="./dist/output.css" rel="stylesheet" />
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Lucide Icon -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- Navbar Style -->
+    <style>
+      .kb-link {
+        @apply text-gray-700 hover:text-gray-900 relative;
+      }
+      .kb-link::after {
+        content: "";
+        @apply absolute -bottom-2 left-0 h-[2px] w-0 bg-gray-900 transition-all;
+      }
+      .kb-link:hover::after {
+        @apply w-full;
+      }
+      .kb-mob {
+        @apply block px-3 py-2 rounded-lg text-gray-800 hover:bg-gray-100;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-200"
+    >
+      <div class="max-w-7xl mx-auto h-16 px-4 md:px-6 flex items-center">
+        <!-- Left: Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="img/logo-kerjabaik.png"
+            alt="KerjaBaik"
+            class="h-8 w-8 rounded"
+          />
+          <span class="font-semibold tracking-tight text-gray-900"
+            >KerjaBaik</span
+          >
+        </a>
+
+        <!-- Center: Menu -->
+        <ul class="hidden md:flex flex-1 justify-center items-center gap-8">
+          <li><a href="services.html" class="kb-link">Services</a></li>
+          <li><a href="about.html" class="kb-link">About us</a></li>
+          <li><a href="blog.html" class="kb-link">Blog</a></li>
+        </ul>
+
+        <!-- Right: CTA -->
+        <div class="ml-auto hidden md:flex items-center gap-3">
+          <a
+            href="contact.html"
+            class="group inline-flex items-center gap-2 pl-5 pr-3 py-2 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition"
+          >
+            <span>Contact us</span>
+            <span
+              class="grid place-items-center h-8 w-8 rounded-full bg-white/15 group-hover:bg-white/20 transition"
+            >
+              <svg
+                class="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- Mobile burger -->
+        <button
+          id="kb-burger"
+          class="block md:hidden ml-auto p-2 rounded-lg hover:bg-gray-100"
+        >
+          <svg
+            class="h-6 w-6 text-gray-800"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+          >
+            <path
+              stroke-width="2"
+              stroke-linecap="round"
+              d="M4 7h16M4 12h16M4 17h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero About -->
+    <section
+      class="relative h-[70vh] flex items-center bg-neutral-900 text-white"
+    >
+      <!-- Background image + overlay -->
+      <div class="absolute inset-0 z-0">
+        <div
+          class="absolute inset-0 bg-center bg-cover"
+          style="background-image: url(&quot;img/about-us3.png&quot;)"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"
+        ></div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          About KerjaBaik
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-white/80">
+          Learn more about our story, our people, and our vision to empower
+          organizations and individuals to thrive.
+        </p>
+      </div>
+    </section>
+
+    <!-- Company Story -->
+    <section
+      class="relative bg-white py-24"
+    >
+      <div
+        class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Image side -->
+        <div
+          class="rounded-3xl overflow-hidden shadow-lg h-[400px]"
+          data-aos="fade-right"
+        >
+          <img
+            src="img/activity.png"
+            alt="KerjaBaik Training"
+            class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+          />
+        </div>
+
+        <!-- Text side -->
+        <div data-aos="fade-left">
+          <h2
+            class="relative text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-10 inline-block"
+          >
+            Our Story
+            <span
+              class="absolute left-0 -bottom-3 h-1 w-24 bg-gradient-to-r from-green-500 to-blue-500"
+            ></span>
+          </h2>
+          <p class="text-lg text-gray-700 leading-relaxed mb-4">
+            KerjaBaik is a
+            <strong>training & consulting company</strong> dedicated to helping
+            individuals and organizations grow in today’s workplace. From the
+            very beginning, we believed that everyone has untapped potential
+            that can be unlocked with the right approach.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed mb-4">
+            Founded by <strong>Cahya Maulana</strong>, an expert with over 7
+            years of experience in corporate training and consulting, KerjaBaik
+            has supported state-owned enterprises, government institutions, and
+            private companies in building stronger, more resilient human
+            capital.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            We are committed to continuously improving our services by adopting
+            innovative methods, strengthening our team, and leveraging digital
+            technology. For us, empowering organizations means enabling the next
+            generation to face workplace challenges with confidence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Highlight -->
+    <!-- Founder Highlight (Custom) -->
+    <section class="relative bg-neutral-50 py-24">
+      <div
+        class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Text side -->
+        <div data-aos="fade-right">
+          <h2
+            class="relative text-2xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-10 inline-block"
+          >
+            Meet Our Founder
+            <span
+              class="absolute left-0 -bottom-3 h-1 w-24 bg-gradient-to-r from-green-500 to-blue-500"
+            ></span>
+          </h2>
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">
+            Cahya Maulana
+          </h3>
+          <p class="text-lg text-gray-700 leading-relaxed mb-4">
+            With more than 7 years of experience delivering impactful training
+            and consulting programs, Cahya has worked with state-owned
+            enterprises, government institutions, and private companies across
+            Indonesia. His vision for KerjaBaik is to create a people-centered,
+            practical, and scalable learning partner for organizations.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Under his leadership, KerjaBaik continues to innovate and expand,
+            building solutions that empower both individuals and companies to
+            thrive in an ever-changing world of work.
+          </p>
+        </div>
+
+        <!-- Image side -->
+        <div
+          class="rounded-3xl overflow-hidden shadow-lg h-[400px]"
+          data-aos="fade-left"
+        >
+          <img
+            src="img/photo-profile.png"
+            alt="Cahya Maulana – Founder KerjaBaik"
+            class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <!-- Vision & Mission (Custom) -->
+    <section class="relative bg-neutral-900 py-24 text-white">
+      <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+        <!-- Heading -->
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2
+            class="relative text-3xl md:text-5xl font-extrabold leading-tight inline-block"
+          >
+            Vision & Mission
+            <span
+              class="absolute left-1/2 -bottom-3 h-1 w-28 -translate-x-1/2 bg-gradient-to-r from-green-400 to-blue-500"
+            ></span>
+          </h2>
+          <p class="mt-6 text-lg text-white/70">
+            Our guiding principles that shape everything we do.
+          </p>
+        </div>
+
+        <!-- Content grid -->
+        <div class="grid md:grid-cols-2 gap-12">
+          <!-- Vision -->
+          <div data-aos="fade-right">
+            <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+            <p class="text-lg text-white/80 leading-relaxed">
+              To help individuals achieve success in the workplace by
+              understanding their roles and responsibilities in shaping a better
+              society and world.
+            </p>
+          </div>
+
+          <!-- Mission -->
+          <div data-aos="fade-left">
+            <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+            <ul class="space-y-4 text-lg text-white/80 leading-relaxed">
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 mt-1">✔</span>
+                Deliver personalized and cutting-edge training & consulting
+                tailored to each individual’s unique needs.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 mt-1">✔</span>
+                Develop innovative, effective, and easy-to-understand
+                methodologies that maximize personal potential.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 mt-1">✔</span>
+                Build strategic partnerships with organizations committed to
+                employee development.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 mt-1">✔</span>
+                Strengthen the KerjaBaik team through continuous recruitment and
+                training to deliver the best services.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-green-400 mt-1">✔</span>
+                Leverage technology to improve customer experience, expand
+                service reach, and enhance operational efficiency.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team -->
+    <!-- Our Team (Custom) -->
+    <section class="relative bg-white py-24">
+      <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+        <!-- Heading -->
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2
+            class="relative text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight inline-block"
+          >
+            Our Team
+            <span
+              class="absolute left-1/2 -bottom-3 h-1 w-24 -translate-x-1/2 bg-gradient-to-r from-green-500 to-blue-500"
+            ></span>
+          </h2>
+          <p class="mt-6 text-lg text-gray-600">
+            The people behind KerjaBaik who are committed to making an impact.
+          </p>
+        </div>
+
+        <!-- Team grid -->
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Member 1 -->
+          <div
+            class="text-center p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2"
+            data-aos="zoom-in"
+          >
+            <img
+              src="img/male-placeholder.png"
+              alt="Team Member"
+              class="mx-auto h-40 w-40 rounded-full object-cover mb-4 shadow-md transition-transform duration-700 hover:scale-105"
+            />
+            <h3 class="text-xl font-semibold text-gray-900">John Doe</h3>
+            <p class="text-gray-600">Training Specialist</p>
+          </div>
+
+          <!-- Member 2 -->
+          <div
+            class="text-center p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2"
+            data-aos="zoom-in"
+          >
+            <img
+              src="img/female-placeholder.png"
+              alt="Team Member"
+              class="mx-auto h-40 w-40 rounded-full object-cover mb-4 shadow-md transition-transform duration-700 hover:scale-105"
+            />
+            <h3 class="text-xl font-semibold text-gray-900">Jane Smith</h3>
+            <p class="text-gray-600">Consultant</p>
+          </div>
+
+          <!-- Member 3 -->
+          <div
+            class="text-center p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2"
+            data-aos="zoom-in"
+          >
+            <img
+              src="img/male-placeholder.png"
+              alt="Team Member"
+              class="mx-auto h-40 w-40 rounded-full object-cover mb-4 shadow-md transition-transform duration-700 hover:scale-105"
+            />
+            <h3 class="text-xl font-semibold text-gray-900">Michael Lee</h3>
+            <p class="text-gray-600">Coach & Mentor</p>
+          </div>
+
+          <!-- Member 4 -->
+          <div
+            class="text-center p-6 rounded-2xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2"
+            data-aos="zoom-in"
+          >
+            <img
+              src="img/female-placeholder.png"
+              alt="Team Member"
+              class="mx-auto h-40 w-40 rounded-full object-cover mb-4 shadow-md transition-transform duration-700 hover:scale-105"
+            />
+            <h3 class="text-xl font-semibold text-gray-900">Sarah Johnson</h3>
+            <p class="text-gray-600">Digital Learning Lead</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <!-- CTA Section (Custom) -->
+    <section
+      class="relative bg-neutral-900 py-24 text-white text-center overflow-hidden"
+    >
+      <!-- Subtle gradient overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-tr from-green-500/10 via-transparent to-blue-500/10"
+      ></div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 mx-auto max-w-3xl px-5 md:px-8"
+        data-aos="fade-up"
+      >
+        <h2
+          class="relative text-3xl md:text-5xl font-extrabold leading-tight inline-block mb-8"
+        >
+          Let’s Work Together
+          <span
+            class="absolute left-1/2 -bottom-3 h-1 w-28 -translate-x-1/2 bg-gradient-to-r from-green-400 to-blue-500"
+          ></span>
+        </h2>
+        <p class="mt-6 text-lg text-white/80 mb-12 leading-relaxed">
+          Ready to unlock your team’s potential? Partner with KerjaBaik and
+          design learning programs that create lasting impact for your
+          organization.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-green-500 to-blue-500 px-10 py-4 text-base md:text-lg font-semibold shadow-lg shadow-green-500/20 hover:shadow-blue-500/30 transition-transform transform hover:-translate-y-1"
+        >
+          Contact Us
+          <span
+            class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/20 text-white"
+            >→</span
+          >
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-neutral-950 text-white pt-16 pb-8">
+      <div
+        class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 grid md:grid-cols-4 gap-12"
+      >
+        <!-- Logo & tagline -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <img
+              src="img/logo-kerjabaik.png"
+              alt="KerjaBaik"
+              class="h-8 w-8 rounded"
+            />
+            <span class="font-semibold tracking-tight text-white"
+              >KerjaBaik</span
+            >
+          </a>
+          <p class="text-sm text-white/60">
+            Delivering training & consulting solutions that empower people and
+            organizations to thrive.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>
+              <a href="services.html" class="hover:text-white">Services</a>
+            </li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><span class="block">Jl. Contoh No.123, Yogyakarta</span></li>
+            <li>
+              <a href="mailto:info@kerjabaik.com" class="hover:text-white"
+                >info@kerjabaik.com</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://wa.me/6282225096269"
+                target="_blank"
+                class="hover:text-white"
+                >+62 822-2509-6269</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social icons -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Follow us</h4>
+          <div class="flex gap-4">
+            <!-- LinkedIn -->
+            <a
+              href="#"
+              class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white hover:text-neutral-900 transition"
+              aria-label="LinkedIn"
+            >
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.7v2.16h.05c.52-.98 1.8-2.16 3.7-2.16 3.95 0 4.7 2.6 4.7 6V24h-4v-7.75c0-1.85-.03-4.25-2.6-4.25-2.6 0-3 2.03-3 4.1V24h-4V8z"
+                />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a
+              href="#"
+              class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white hover:text-neutral-900 transition"
+              aria-label="Instagram"
+            >
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm4.5 3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2A3.5 3.5 0 1 0 15.5 12 3.5 3.5 0 0 0 12 9zm5-3a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"
+                />
+              </svg>
+            </a>
+            <!-- Twitter -->
+            <a
+              href="#"
+              class="h-10 w-10 flex items-center justify-center rounded-full bg-white/10 text-white/70 hover:bg-white hover:text-neutral-900 transition"
+              aria-label="Twitter"
+            >
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M23.954 4.569c-.885.389-1.83.654-2.825.775 
+                              1.014-.611 1.794-1.574 2.163-2.724-.951.564-2.005.974-3.127 
+                              1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 
+                              0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-.422.722-.666 
+                              1.561-.666 2.475 0 1.708.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616 
+                              v.061c0 2.385 1.693 4.374 4.169 4.827-.413.111-.849.171-1.296.171-.314 
+                              0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-2.07 
+                              1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.209 7.548 
+                              2.209 9.142 0 14.307-7.721 13.995-14.646.962-.689 1.797-1.56 2.457-2.549z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="mt-12 border-t border-white/10 pt-6 text-center text-sm text-white/50"
+      >
+        © <span id="year"></span> KerjaBaik. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- JS Lucide -->
+    <script>
+      lucide.createIcons();
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // durasi animasi (ms)
+        once: true, // animasi hanya sekali (ga looping saat scroll)
+      });
+    </script>
+
+    <!-- JS for dynamic year -->
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
