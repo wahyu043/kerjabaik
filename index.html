@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kerjabaik</title>
+  <link href="./dist/output.css" rel="stylesheet" />
+  <!-- Font Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- tiny CSS helpers -->
+  <style>
+    .kb-link {
+      @apply text-gray-700 hover:text-gray-900 relative;
+    }
+
+    .kb-link::after {
+      content: "";
+      @apply absolute -bottom-2 left-0 h-[2px] w-0 bg-gray-900 transition-all;
+    }
+
+    .kb-link:hover::after {
+      @apply w-full;
+    }
+
+    .kb-mob {
+      @apply block px-3 py-2 rounded-lg text-gray-800 hover:bg-gray-100;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar KerjaBaik -->
+  <nav
+    class="sticky top-0 z-50 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto h-16 px-4 md:px-6 flex items-center">
+      <!-- Left: Logo -->
+      <a href="/" class="flex items-center gap-2">
+        <img src="img/logo-kerjabaik.png" alt="KerjaBaik" class="h-8 w-8 rounded" />
+        <span class="font-semibold tracking-tight text-gray-900">KerjaBaik</span>
+      </a>
+
+      <!-- Center: Menu -->
+      <ul class="hidden md:flex flex-1 justify-center items-center gap-8">
+        <li><a href="#" class="kb-link">Services</a></li>
+        <li><a href="#" class="kb-link">About us</a></li>
+        <li><a href="#" class="kb-link">Blog</a></li>
+      </ul>
+
+      <!-- Right: Language + CTA -->
+      <div class="ml-auto hidden md:flex items-center gap-3">
+        <!-- Language switch -->
+        <button class="px-3 py-1.5 rounded-full border border-gray-300 text-sm text-gray-700 hover:bg-gray-50">
+          EN <span class="opacity-40">|</span> ID
+        </button>
+        <!-- Big pill CTA -->
+        <a href="#" target="_blank"
+          class="group inline-flex items-center gap-2 pl-5 pr-3 py-2 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition">
+          <span>Contact us</span>
+          <span class="grid place-items-center h-8 w-8 rounded-full bg-white/15 group-hover:bg-white/20 transition">
+            <!-- Arrow icon -->
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- Mobile: hamburger -->
+      <button id="kb-burger" class="block md:hidden ml-auto p-2 rounded-lg hover:bg-gray-100">
+        <svg class="h-6 w-6 text-gray-800" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-width="2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div id="kb-drawer" class="block md:hidden hidden border-t border-gray-200 bg-white/95 backdrop-blur">
+      <ul class="px-4 py-4 space-y-2">
+        <li><a href="#" class="kb-link">Services</a></li>
+        <li><a href="#" class="kb-link">About us</a></li>
+        <li><a href="#" class="kb-link">Blog</a></li>
+        <li>
+          <a href="https://wa.me/6282225096269" target="_blank"
+            class="mt-2 inline-flex items-center justify-center w-full py-2 rounded-full bg-gray-900 text-white">
+            Contact us →
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- SIMPLE HERO -->
+
+  <section id="hero" class="relative h-screen overflow-hidden bg-neutral-900 text-white">
+    <!-- Background image + soft gradient overlay -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-center bg-cover opacity-70"
+        style="background-image: url(&quot;img/pelatihan-img.jpg&quot;)"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 mx-auto max-w-7xl px-5 md:px-8 lg:px-10 pt-20 md:pt-40 pb-16">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+          Deliver industry-leading
+          <span class="block">learning & consulting</span>
+          <span class="block">services</span>
+        </h1>
+        <p class="mt-6 text-base md:text-lg text-white/80 max-w-2xl">
+          We help organizations grow through practical training and
+          consulting— blending data-informed strategy with human-centered
+          facilitation.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href="#services"
+            class="group inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm md:text-base font-medium backdrop-blur-md transition hover:bg-white/20">
+            Explore services
+            <span
+              class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/20 transition group-hover:translate-x-0.5">→</span>
+          </a>
+          <a href="#contact"
+            class="group inline-flex items-center gap-2 rounded-full bg-white text-neutral-900 px-4 py-2 text-sm md:text-base font-semibold transition hover:bg-neutral-100">
+            Contact us
+            <span
+              class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 text-white transition group-hover:translate-x-0.5">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="relative bg-white py-24">
+    <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+      <div class="max-w-3xl mb-14">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          Our core services
+        </h2>
+        <p class="mt-4 text-lg text-gray-600">
+          We provide practical, hands-on solutions designed to help your
+          organization grow and thrive in a fast-changing environment.
+        </p>
+      </div>
+
+      <!-- Grid -->
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div
+          class="group rounded-2xl bg-gray-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition">
+          <div class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800">
+            📚
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Training & Workshop
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Interactive sessions tailored to enhance skills and knowledge
+            across various industries.
+          </p>
+        </div>
+
+        <div
+          class="group rounded-2xl bg-gray-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition">
+          <div class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800">
+            💼
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Consulting</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Strategic advice and solutions blending data‑informed insights
+            with human‑centered facilitation.
+          </p>
+        </div>
+
+        <div
+          class="group rounded-2xl bg-gray-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition">
+          <div class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800">
+            🎯
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Coaching & Mentoring
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Personalized guidance to empower leaders and teams to achieve
+            measurable impact.
+          </p>
+        </div>
+
+        <div
+          class="group rounded-2xl bg-gray-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition">
+          <div class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800">
+            🌐
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            Digital Learning
+          </h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Modern, scalable e-learning experiences designed for hybrid and
+            remote-first organizations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Clients Section -->
+  <section id="clients" class="relative bg-neutral-50 py-20">
+    <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 text-center">
+      <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-12">
+        Trusted by leading organizations
+      </h2>
+      <div class="flex flex-wrap justify-center items-center gap-10 opacity-80">
+        <img src="img/client1-rumah-perubahan.png" alt="Client 1"
+          class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition" />
+        <img src="img/client2-rs-jih.png" alt="Client 2"
+          class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition" />
+        <img src="img/client3-BTAM.png" alt="Client 3"
+          class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition" />
+        <img src="img/client4-bni-corp.png" alt="Client 4"
+          class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition" />
+        <img src="img/client5-um-metro.png" alt="Client 5"
+          class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-us" class="relative bg-white py-24">
+    <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+      <div class="max-w-3xl mb-14 text-center mx-auto">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+          Why choose KerjaBaik?
+        </h2>
+        <p class="mt-4 text-lg text-gray-600">
+          We combine human-centered facilitation with data-informed strategies to deliver impactful training and
+          consulting.
+        </p>
+      </div>
+
+
+      <!-- Grid -->
+      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div
+          class="group rounded-2xl bg-neutral-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition">
+          <div class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800">
+            🤝
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Human-Centered</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We focus on people and their real challenges, creating solutions that fit their unique needs.
+          </p>
+        </div>
+
+
+        <div
+          class="group rounded-2xl bg-neutral-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition">
+          <div class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800">
+            📊
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Data-Informed</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Our strategies are guided by insights and analytics, ensuring measurable outcomes for every project.
+          </p>
+        </div>
+
+
+        <div
+          class="group rounded-2xl bg-neutral-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition">
+          <div class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800">
+            🛠️
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Practical & Hands-On</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Every session is designed to be actionable and directly applicable to the workplace.
+          </p>
+        </div>
+
+
+        <div
+          class="group rounded-2xl bg-neutral-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition">
+          <div class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800">
+            ⚡
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">Scalable & Flexible</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Suitable for individuals, small teams, or large organizations — scalable to meet any demand.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Snapshot Section -->
+    <section id="about" class="relative bg-neutral-50 py-24">
+      <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 grid md:grid-cols-2 gap-12 items-center">
+        <!-- Image side -->
+        <div class="rounded-2xl overflow-hidden shadow-md">
+          <img src="img/activity.png" alt="KerjaBaik Team" class="w-full h-full object-cover" />
+        </div>
+        <!-- Text side -->
+        <div>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+            About KerjaBaik
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            KerjaBaik is a training and consulting company dedicated to helping individuals and organizations thrive in
+            today’s workplace. With years of experience, we deliver impactful programs tailored to modern challenges.
+          </p>
+          <a href="about.html"
+            class="inline-flex items-center gap-2 rounded-full bg-gray-900 text-white px-6 py-3 text-sm md:text-base font-semibold transition hover:bg-black">
+            Learn more
+            <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/15">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog/Insights Section -->
+    <section id="blog" class="relative bg-white py-24">
+      <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+        <div class="max-w-3xl mb-14 text-center mx-auto">
+          <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+            Insights & Resources
+          </h2>
+          <p class="mt-4 text-lg text-gray-600">
+            Explore our latest thoughts, tips, and strategies on training, consulting, and workplace growth.
+          </p>
+        </div>
+
+
+        <!-- Grid -->
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+          <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition">
+            <img src="img/pelatihan-img.jpg" alt="Blog 1" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <span class="text-sm text-gray-500">Training</span>
+              <h3 class="text-xl font-semibold text-gray-900 mt-2 mb-3 group-hover:text-gray-700 transition">
+                5 Tips to Improve Team Performance
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Discover practical approaches to boost productivity and collaboration across your team.
+              </p>
+              <a href="#" class="text-sm font-medium text-gray-900 hover:underline">Read more →</a>
+            </div>
+          </div>
+
+
+          <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition">
+            <img src="img/pelatihan-img-2.png" alt="Blog 2" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <span class="text-sm text-gray-500">Leadership</span>
+              <h3 class="text-xl font-semibold text-gray-900 mt-2 mb-3 group-hover:text-gray-700 transition">
+                The Future of Workplace Learning
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                How organizations can adapt and thrive with continuous learning in a hybrid environment.
+              </p>
+              <a href="#" class="text-sm font-medium text-gray-900 hover:underline">Read more →</a>
+            </div>
+          </div>
+
+
+          <div class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition">
+            <img src="img/slide 2.jpg" alt="Blog 3" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <span class="text-sm text-gray-500">Consulting</span>
+              <h3 class="text-xl font-semibold text-gray-900 mt-2 mb-3 group-hover:text-gray-700 transition">
+                How to Build Resilient Leaders
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                Learn the essential skills leaders need to navigate uncertainty and drive sustainable growth.
+              </p>
+              <a href="#" class="text-sm font-medium text-gray-900 hover:underline">Read more →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="relative bg-neutral-900 py-24 text-white text-center">
+      <div class="mx-auto max-w-3xl px-5 md:px-8">
+        <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
+          Ready to elevate your people and organization?
+        </h2>
+        <p class="text-lg text-white/80 mb-10">
+          Let’s collaborate to design training and consulting solutions that drive real growth and impact.
+        </p>
+        <a href="#contact"
+          class="inline-flex items-center gap-2 rounded-full bg-white text-neutral-900 px-8 py-4 text-base md:text-lg font-semibold transition hover:bg-neutral-100">
+          Get in Touch
+          <span class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 text-white">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- JS Navbar -->
+    <script>
+      const navbar = document.getElementById("kb-navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+          navbar.classList.add(
+            "bg-white/70",
+            "backdrop-blur-lg",
+            "shadow-md",
+            "border-gray-200"
+          );
+          navbar.classList.remove("bg-white/30", "border-transparent");
+        } else {
+          navbar.classList.add("bg-white/30", "border-transparent");
+          navbar.classList.remove(
+            "bg-white/70",
+            "backdrop-blur-lg",
+            "shadow-md",
+            "border-gray-200"
+          );
+        }
+      });
+    </script>
+
+    <!-- JS for Navbar Hamburger Mobile -->
+    <script>
+      const b = document.getElementById("kb-burger");
+      const d = document.getElementById("kb-drawer");
+      b?.addEventListener("click", () => d.classList.toggle("hidden"));
+    </script>
+</body>
+
+</html>
