@@ -67,14 +67,14 @@
         <!-- Right: Language + CTA -->
         <div class="ml-auto hidden md:flex items-center gap-3">
           <!-- Language switch -->
-          <button
+          <!-- <button
             class="px-3 py-1.5 rounded-full border border-gray-300 text-sm text-gray-700 hover:bg-gray-50"
           >
             EN <span class="opacity-40">|</span> ID
-          </button>
+          </button> -->
           <!-- Big pill CTA -->
           <a
-            href="#"
+            href="contact.html"
             target="_blank"
             class="group inline-flex items-center gap-2 pl-5 pr-3 py-2 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition"
           >
@@ -715,7 +715,9 @@
         <div>
           <h4 class="text-lg font-semibold mb-4">Navigation</h4>
           <ul class="space-y-2 text-sm text-white/70">
-            <li><a href="services.html" class="hover:text-white">Services</a></li>
+            <li>
+              <a href="services.html" class="hover:text-white">Services</a>
+            </li>
             <li><a href="about.html" class="hover:text-white">About</a></li>
             <li><a href="#" class="hover:text-white">Blog</a></li>
           </ul>
@@ -819,14 +821,12 @@
         }
       });
     </script>
-
     <!-- JS for Navbar Hamburger Mobile -->
     <script>
       const b = document.getElementById("kb-burger");
       const d = document.getElementById("kb-drawer");
       b?.addEventListener("click", () => d.classList.toggle("hidden"));
     </script>
-
     <!-- JS AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -834,7 +834,6 @@
       lucide?.createIcons?.();
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-
     <!-- JS for dynamic year -->
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();

@@ -1,5 +1,22 @@
 # KerjaBaik Website Changelog
 
+## v6.0.0 – 2025-09-07
+
+### Diperbarui – Services Page Refactor
+
+- Navbar: diseragamkan dengan halaman lain (hapus tombol EN/ID, CTA konsisten).
+- Hero Section: background image + overlay gradient, heading + accent line, animasi AOS fade-up.
+- Intro Section: dibuat ringkas dengan heading *Our Commitment*, accent line, teks dihias (bold/italic), background `bg-neutral-50`.
+- Core Services: emoji diganti Lucide icons (`book-open`, `briefcase`, `target`, `monitor`), flat grid 4 card dengan hover subtle (shadow + translate-y), animasi stagger AOS, accent line di heading.
+- Key Training Topics: layout 2 kolom (list kiri, gambar sticky kanan). List item pakai checklist hijau bulat + judul + deskripsi kecil di bawah + divider abu. Sticky image dengan efek overlay putih → hilang saat hover + zoom in-frame.
+- Our Models (Delivery Models): pertahankan gaya lama dua-layer (default icon + judul, hover → image + deskripsi). Tambahkan icon di hover state, animasi hover dengan opacity + translate-y dari bawah. Background section tetap dark.
+- CTA Section: background putih, heading + accent line, subtext singkat, tombol CTA gradient hijau → biru dengan efek hover scale, animasi fade-up.
+
+### Catatan
+- Semua section Services kini konsisten dengan homepage, about, dan contact.
+- Visual lebih enterprise, clean, dan interaktif.
+
+
 ## v5.0.0 – 2025-09-07
 
 ### Diperbarui – Homepage Refactor Layout & Animation

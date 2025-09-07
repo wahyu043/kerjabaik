@@ -13,7 +13,8 @@
     />
     <!-- Lucide Icon -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Navbar Style -->
     <style>
       .kb-link {
@@ -53,17 +54,12 @@
         <!-- Center: Menu -->
         <ul class="hidden md:flex flex-1 justify-center items-center gap-8">
           <li><a href="services.html" class="kb-link">Services</a></li>
-          <li><a href="about.html" class="kb-link">About us</a></li>
-          <li><a href="blog.html" class="kb-link">Blog</a></li>
+          <li><a href="about.html" class="kb-link">About Us</a></li>
+          <li><a href="#" class="kb-link">Blog</a></li>
         </ul>
 
-        <!-- Right: Language + CTA -->
+        <!-- Right: CTA -->
         <div class="ml-auto hidden md:flex items-center gap-3">
-          <button
-            class="px-3 py-1.5 rounded-full border border-gray-300 text-sm text-gray-700 hover:bg-gray-50"
-          >
-            EN <span class="opacity-40">|</span> ID
-          </button>
           <a
             href="contact.html"
             class="group inline-flex items-center gap-2 pl-5 pr-3 py-2 rounded-full bg-gray-900 text-white hover:bg-gray-800 transition"
@@ -72,19 +68,7 @@
             <span
               class="grid place-items-center h-8 w-8 rounded-full bg-white/15 group-hover:bg-white/20 transition"
             >
-              <svg
-                class="h-4 w-4"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
             </span>
           </a>
         </div>
@@ -94,18 +78,7 @@
           id="kb-burger"
           class="block md:hidden ml-auto p-2 rounded-lg hover:bg-gray-100"
         >
-          <svg
-            class="h-6 w-6 text-gray-800"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-          >
-            <path
-              stroke-width="2"
-              stroke-linecap="round"
-              d="M4 7h16M4 12h16M4 17h16"
-            />
-          </svg>
+          <i data-lucide="menu" class="h-6 w-6 text-gray-800"></i>
         </button>
       </div>
     </nav>
@@ -126,8 +99,13 @@
       </div>
 
       <!-- Content -->
-      <div class="relative z-10 mx-auto max-w-4xl px-6 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+      <div
+        class="relative z-10 mx-auto max-w-4xl px-6 text-center"
+        data-aos="fade-up"
+      >
+        <h1
+          class="relative text-4xl md:text-6xl font-extrabold leading-tight inline-block"
+        >
           Our Services
         </h1>
         <p class="mt-6 text-lg md:text-xl text-white/80">
@@ -138,44 +116,66 @@
     </section>
 
     <!-- Intro Section -->
-    <section class="relative bg-white py-20">
-      <div class="mx-auto max-w-4xl px-6 text-center">
-        <p class="mt-6 text-lg text-gray-600">
+    <section class="relative bg-white py-24">
+      <div class="mx-auto max-w-4xl px-6 text-center" data-aos="fade-up">
+        <h2
+          class="relative text-2xl md:text-4xl font-bold text-gray-900 inline-block mb-8"
+        >
+          Our Commitment
+          <span
+            class="absolute left-1/2 -bottom-3 h-1 w-20 -translate-x-1/2 bg-gradient-to-r from-green-500 to-blue-500"
+          ></span>
+        </h2>
+
+        <p class="mt-6 text-lg text-gray-600 leading-relaxed">
           KerjaBaik delivers
           <span class="font-semibold"
             >personalized and cutting-edge training & consulting</span
           >, carefully designed to meet the unique needs of individuals and
           organizations. We believe that an innovative, effective, and
           easy-to-understand approach is the key to helping you unlock your
-          maximum potential.
+          maximum potential. At KerjaBaik, we believe that an
+          <span class="font-semibold"
+            >innovative and people-centered approach</span
+          >
+          is the key to unlocking your team’s potential. Every program is
+          carefully designed to be
+          <span class="italic">practical, relevant, and transformative.</span>
         </p>
       </div>
     </section>
 
     <!-- Core Services Section -->
-    <section class="relative bg-neutral-50 py-24">
+    <section class="relative bg-gray-50 py-24">
       <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
-        <div class="max-w-3xl mb-14 text-center mx-auto">
-          <h2 class="text-2xl md:text-4xl font-bold text-gray-900">
+        <!-- Heading -->
+        <div class="max-w-3xl mb-14 text-center mx-auto" data-aos="fade-up">
+          <h2
+            class="relative text-2xl md:text-4xl font-bold text-gray-900 inline-block mb-6"
+          >
             Core Services
+            <span
+              class="absolute left-1/2 -bottom-3 h-1 w-20 -translate-x-1/2 bg-gradient-to-r from-green-500 to-blue-500"
+            ></span>
           </h2>
-          <p class="mt-4 text-lg text-gray-600">
+          <p class="mt-6 text-lg text-gray-600">
             Four pillars of our service offerings designed to empower growth and
             transformation.
           </p>
         </div>
 
         <!-- Grid -->
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Item 1 -->
           <div
-            class="group rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition"
+            class="group p-8 rounded-2xl bg-neutral-50 hover:bg-white border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-2"
+            data-aos="fade-up"
           >
-            <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
-            >
-              📚
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            <i
+              data-lucide="book-open"
+              class="h-10 w-10 text-green-600 mb-6 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
               Training & Workshop
             </h3>
             <p class="text-gray-600 text-sm leading-relaxed">
@@ -184,30 +184,34 @@
             </p>
           </div>
 
+          <!-- Item 2 -->
           <div
-            class="group rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition"
+            class="group p-8 rounded-2xl bg-neutral-50 hover:bg-white border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-2"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
-            <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
-            >
-              💼
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Consulting</h3>
+            <i
+              data-lucide="briefcase"
+              class="h-10 w-10 text-green-600 mb-6 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">Consulting</h3>
             <p class="text-gray-600 text-sm leading-relaxed">
               Strategic solutions blending data-driven insights with
               human-centered facilitation.
             </p>
           </div>
 
+          <!-- Item 3 -->
           <div
-            class="group rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition"
+            class="group p-8 rounded-2xl bg-neutral-50 hover:bg-white border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-2"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
-            <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
-            >
-              🎯
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            <i
+              data-lucide="target"
+              class="h-10 w-10 text-green-600 mb-6 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
               Coaching & Mentoring
             </h3>
             <p class="text-gray-600 text-sm leading-relaxed">
@@ -216,15 +220,17 @@
             </p>
           </div>
 
+          <!-- Item 4 -->
           <div
-            class="group rounded-2xl bg-white p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-gray-50 transition"
+            class="group p-8 rounded-2xl bg-neutral-50 hover:bg-white border border-gray-100 hover:shadow-xl transition transform hover:-translate-y-2"
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
-            <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
-            >
-              🌐
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            <i
+              data-lucide="monitor"
+              class="h-10 w-10 text-green-600 mb-6 group-hover:scale-110 transition-transform"
+            ></i>
+            <h3 class="text-lg font-semibold text-gray-900 mb-3">
               Digital Learning
             </h3>
             <p class="text-gray-600 text-sm leading-relaxed">
@@ -236,121 +242,173 @@
       </div>
     </section>
 
-    <!-- Key Training Topics Section -->
+    <!-- Key Training Topics -->
     <section class="relative bg-white py-24">
       <div
-        class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 grid md:grid-cols-2 gap-12 items-start"
+        class="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-2 gap-12 items-start"
       >
-        <!-- Left: topics list -->
+        <!-- Left: List -->
         <div>
-          <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2
+            class="relative text-2xl md:text-4xl font-bold text-gray-900 inline-block mb-10"
+            data-aos="fade-up"
+          >
             Key Training Topics
+            <span
+              class="absolute left-0 -bottom-3 h-1 w-20 bg-gradient-to-r from-green-500 to-blue-500"
+            ></span>
           </h2>
-          <p class="text-lg text-gray-600 mb-10">
-            Our programs cover a wide range of topics to address today’s
-            workplace challenges.
-          </p>
 
-          <div class="space-y-10">
+          <div class="divide-y divide-gray-200">
             <!-- Item 1 -->
-            <div class="relative pl-12">
+            <div class="flex items-start gap-4 py-6" data-aos="fade-up">
               <span
-                class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 bg-white"
-                >→</span
+                class="flex-shrink-0 h-9 w-9 rounded-full bg-green-100 flex items-center justify-center"
               >
-              <h3 class="font-semibold text-gray-900 mb-2">
-                Work Motivation & Performance
-              </h3>
-              <p class="text-sm text-gray-600">
-                Boosting productivity and aligning goals with organizational
-                vision.
-              </p>
-              <div class="mt-4 h-px w-full bg-gray-200"></div>
+                <i
+                  data-lucide="check-circle"
+                  class="h-5 w-5 text-green-600"
+                ></i>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Motivation & Performance
+                </h3>
+                <p class="text-sm text-gray-600 mt-1">
+                  Boosting productivity and aligning goals with organizational
+                  vision.
+                </p>
+              </div>
             </div>
 
             <!-- Item 2 -->
-            <div class="relative pl-12">
+            <div
+              class="flex items-start gap-4 py-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
               <span
-                class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 bg-white"
-                >→</span
+                class="flex-shrink-0 h-9 w-9 rounded-full bg-green-100 flex items-center justify-center"
               >
-              <h3 class="font-semibold text-gray-900 mb-2">
-                Interpersonal & Communication Skills
-              </h3>
-              <p class="text-sm text-gray-600">
-                Enhancing collaboration, empathy, and effective communication at
-                work.
-              </p>
-              <div class="mt-4 h-px w-full bg-gray-200"></div>
+                <i
+                  data-lucide="check-circle"
+                  class="h-5 w-5 text-green-600"
+                ></i>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Interpersonal & Communication Skills
+                </h3>
+                <p class="text-sm text-gray-600 mt-1">
+                  Enhancing collaboration, empathy, and effective communication
+                  at work.
+                </p>
+              </div>
             </div>
 
             <!-- Item 3 -->
-            <div class="relative pl-12">
+            <div
+              class="flex items-start gap-4 py-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <span
-                class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 bg-white"
-                >→</span
+                class="flex-shrink-0 h-9 w-9 rounded-full bg-green-100 flex items-center justify-center"
               >
-              <h3 class="font-semibold text-gray-900 mb-2">
-                Time & Stress Management
-              </h3>
-              <p class="text-sm text-gray-600">
-                Practical strategies for managing workload and building
-                resilience.
-              </p>
-              <div class="mt-4 h-px w-full bg-gray-200"></div>
+                <i
+                  data-lucide="check-circle"
+                  class="h-5 w-5 text-green-600"
+                ></i>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Time & Stress Management
+                </h3>
+                <p class="text-sm text-gray-600 mt-1">
+                  Practical strategies for managing workload and building
+                  resilience.
+                </p>
+              </div>
             </div>
 
             <!-- Item 4 -->
-            <div class="relative pl-12">
+            <div
+              class="flex items-start gap-4 py-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <span
-                class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 bg-white"
-                >→</span
+                class="flex-shrink-0 h-9 w-9 rounded-full bg-green-100 flex items-center justify-center"
               >
-              <h3 class="font-semibold text-gray-900 mb-2">
-                Leadership & Career Development
-              </h3>
-              <p class="text-sm text-gray-600">
-                Cultivating future leaders and supporting career growth
-                pathways.
-              </p>
-              <div class="mt-4 h-px w-full bg-gray-200"></div>
+                <i
+                  data-lucide="check-circle"
+                  class="h-5 w-5 text-green-600"
+                ></i>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Leadership & Career Development
+                </h3>
+                <p class="text-sm text-gray-600 mt-1">
+                  Cultivating future leaders and supporting career growth
+                  pathways.
+                </p>
+              </div>
             </div>
 
             <!-- Item 5 -->
-            <div class="relative pl-12">
+            <div
+              class="flex items-start gap-4 py-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <span
-                class="absolute left-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-gray-400 text-gray-600 bg-white"
-                >→</span
+                class="flex-shrink-0 h-9 w-9 rounded-full bg-green-100 flex items-center justify-center"
               >
-              <h3 class="font-semibold text-gray-900 mb-2">
-                Innovation & Business Strategy
-              </h3>
-              <p class="text-sm text-gray-600">
-                Designing creative solutions and fostering entrepreneurial
-                thinking.
-              </p>
-              <div class="mt-4 h-px w-full bg-gray-200"></div>
+                <i
+                  data-lucide="check-circle"
+                  class="h-5 w-5 text-green-600"
+                ></i>
+              </span>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Business Strategy & Innovation
+                </h3>
+                <p class="text-sm text-gray-600 mt-1">
+                  Designing creative solutions and fostering entrepreneurial
+                  thinking.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- Right: sticky image -->
-        <div class="sticky top-24 self-start">
-          <img
-            src="img/Cara-Presentasi.webp"
-            alt="Training illustration"
-            class="rounded-2xl shadow-md w-full object-cover"
-          />
+        <!-- Right: Sticky Image with Overlay + Zoom -->
+        <div class="sticky top-24">
+          <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+            <img
+              src="img/Cara-Presentasi.webp"
+              alt="Training illustration"
+              class="w-full object-cover transform transition duration-700 group-hover:scale-110"
+              data-aos="fade-up"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Delivery Models Section -->
+    <!-- Our Models Section -->
     <section class="relative bg-neutral-900 py-24 text-white">
       <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
-        <div class="max-w-3xl mb-14 text-center mx-auto">
-          <h2 class="text-2xl md:text-4xl font-bold">Explore Our Models</h2>
-          <p class="mt-4 text-lg text-white/70">
+        <!-- Heading -->
+        <div class="text-center mb-14" data-aos="fade-up">
+          <h2 class="relative text-2xl md:text-4xl font-bold inline-block mb-6">
+            Explore Our Models
+            <span
+              class="absolute left-1/2 -bottom-3 h-1 w-20 -translate-x-1/2 bg-gradient-to-r from-green-500 to-blue-500"
+            ></span>
+          </h2>
+          <p class="mt-6 text-lg text-white/70 max-w-3xl mx-auto">
             Flexible formats to match your needs—whether for individuals, teams,
             or organizations.
           </p>
@@ -359,7 +417,9 @@
         <!-- Grid -->
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <!-- Box 1 -->
-          <div class="relative group overflow-hidden bg-neutral-800 h-64">
+          <div
+            class="relative group overflow-hidden bg-neutral-800 h-64 rounded-2xl"
+          >
             <!-- Default -->
             <div
               class="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 group-hover:opacity-0"
@@ -369,7 +429,7 @@
             </div>
             <!-- Hover -->
             <div
-              class="absolute inset-0 bg-cover bg-center opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700"
+              class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-700"
               style="
                 background-image: url(&quot;img/personal-coaching.jpg&quot;);
               "
@@ -378,6 +438,7 @@
               <div
                 class="absolute inset-0 flex flex-col justify-center items-center text-center p-4"
               >
+                <i class="w-8 h-8 mb-3 text-green-400"></i>
                 <h3 class="text-lg font-semibold mb-2">Personal Coaching</h3>
                 <p class="text-sm text-white/80">
                   One-on-one sessions tailored to individual growth and personal
@@ -388,7 +449,9 @@
           </div>
 
           <!-- Box 2 -->
-          <div class="relative group overflow-hidden bg-neutral-800 h-64">
+          <div
+            class="relative group overflow-hidden bg-neutral-800 h-64 rounded-2xl"
+          >
             <div
               class="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 group-hover:opacity-0"
             >
@@ -396,13 +459,14 @@
               <h3 class="text-lg font-semibold">Group Training</h3>
             </div>
             <div
-              class="absolute inset-0 bg-cover bg-center opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700"
+              class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-700"
               style="background-image: url(&quot;img/group-training.png&quot;)"
             >
               <div class="absolute inset-0 bg-black/60"></div>
               <div
                 class="absolute inset-0 flex flex-col justify-center items-center text-center p-4"
               >
+                <i class="w-8 h-8 mb-3 text-green-400"></i>
                 <h3 class="text-lg font-semibold mb-2">Group Training</h3>
                 <p class="text-sm text-white/80">
                   Workshops designed for collective learning and collaboration.
@@ -412,7 +476,9 @@
           </div>
 
           <!-- Box 3 -->
-          <div class="relative group overflow-hidden bg-neutral-800 h-64">
+          <div
+            class="relative group overflow-hidden bg-neutral-800 h-64 rounded-2xl"
+          >
             <div
               class="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 group-hover:opacity-0"
             >
@@ -420,7 +486,7 @@
               <h3 class="text-lg font-semibold">Individual Consulting</h3>
             </div>
             <div
-              class="absolute inset-0 bg-cover bg-center opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700"
+              class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-700"
               style="
                 background-image: url(&quot;img/individual coaching.jpg&quot;);
               "
@@ -429,6 +495,7 @@
               <div
                 class="absolute inset-0 flex flex-col justify-center items-center text-center p-4"
               >
+                <i class="w-8 h-8 mb-3 text-green-400"></i>
                 <h3 class="text-lg font-semibold mb-2">
                   Individual Consulting
                 </h3>
@@ -441,7 +508,9 @@
           </div>
 
           <!-- Box 4 -->
-          <div class="relative group overflow-hidden bg-neutral-800 h-64">
+          <div
+            class="relative group overflow-hidden bg-neutral-800 h-64 rounded-2xl"
+          >
             <div
               class="absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-500 group-hover:opacity-0"
             >
@@ -452,13 +521,14 @@
               <h3 class="text-lg font-semibold">Team Consulting</h3>
             </div>
             <div
-              class="absolute inset-0 bg-cover bg-center opacity-0 translate-y-8 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700"
+              class="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-all duration-700"
               style="background-image: url(&quot;img/team-consulting.jpg&quot;)"
             >
               <div class="absolute inset-0 bg-black/60"></div>
               <div
                 class="absolute inset-0 flex flex-col justify-center items-center text-center p-4"
               >
+                <i class="w-8 h-8 mb-3 text-green-400"></i>
                 <h3 class="text-lg font-semibold mb-2">Team Consulting</h3>
                 <p class="text-sm text-white/80">
                   Sessions that strengthen team dynamics and drive performance.
@@ -471,27 +541,31 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="relative bg-white-900 py-24 text-white text-center">
-      <div class="mx-auto max-w-3xl px-5 md:px-8">
+    <section class="relative bg-white py-24 text-center">
+      <div class="mx-auto max-w-3xl px-6" data-aos="fade-up">
         <h2
-          class="text-3xl text-black md:text-5xl font-extrabold leading-tight mb-6"
+          class="relative text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-8 inline-block"
         >
           Let’s design the right program for you
+          <span
+            class="absolute left-1/2 -bottom-3 h-1 w-24 -translate-x-1/2 bg-gradient-to-r from-green-500 to-blue-500"
+          ></span>
         </h2>
-        <p class="text-lg text-black/80 mb-10">
+        <p class="mt-8 text-lg text-gray-600 mb-10">
           Whether you’re building stronger teams, developing leaders, or scaling
           innovation — KerjaBaik is ready to craft solutions that make real
           impact.
         </p>
         <a
           href="contact.html"
-          class="inline-flex items-center gap-2 rounded-full bg-neutral-900 text-whiteq px-8 py-4 text-base md:text-lg font-semibold transition hover:bg-neutral-100 hover:text-black"
+          class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 text-base md:text-lg font-semibold transition hover:scale-105"
         >
           Get Started Today
           <span
-            class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 text-white"
-            >→</span
+            class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/20"
           >
+            <i data-lucide="arrow-right" class="h-4 w-4"></i>
+          </span>
         </a>
       </div>
     </section>
@@ -543,10 +617,10 @@
             </li>
             <li>
               <a
-                href="https://wa.me/6282225096269"
+                href="#"
                 target="_blank"
                 class="hover:text-white"
-                >+62 822-2509-6269</a
+                >+62 123-456-789</a
               >
             </li>
           </ul>
@@ -609,11 +683,42 @@
       </div>
     </footer>
 
-    <!-- JS Lucide -->
+    <!-- JS Navbar -->
     <script>
-      lucide.createIcons();
+      const navbar = document.getElementById("kb-navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 10) {
+          navbar.classList.add(
+            "bg-white/70",
+            "backdrop-blur-lg",
+            "shadow-md",
+            "border-gray-200"
+          );
+          navbar.classList.remove("bg-white/30", "border-transparent");
+        } else {
+          navbar.classList.add("bg-white/30", "border-transparent");
+          navbar.classList.remove(
+            "bg-white/70",
+            "backdrop-blur-lg",
+            "shadow-md",
+            "border-gray-200"
+          );
+        }
+      });
     </script>
-
+    <!-- JS for Navbar Hamburger Mobile -->
+    <script>
+      const b = document.getElementById("kb-burger");
+      const d = document.getElementById("kb-drawer");
+      b?.addEventListener("click", () => d.classList.toggle("hidden"));
+    </script>
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      lucide?.createIcons?.();
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
     <!-- JS for dynamic year -->
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
