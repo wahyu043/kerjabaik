@@ -12,10 +12,13 @@
       rel="stylesheet"
     />
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Lucide Icon -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- Navbar Style -->
+    <!-- Custom Style -->
     <style>
       .kb-link {
         @apply text-gray-700 hover:text-gray-900 relative;
@@ -123,8 +126,8 @@
         class="block md:hidden hidden border-t border-gray-200 bg-white/95 backdrop-blur"
       >
         <ul class="px-4 py-4 space-y-2">
-          <li><a href="#" class="kb-link">Services</a></li>
-          <li><a href="#" class="kb-link">About us</a></li>
+          <li><a href="services.html" class="kb-link">Services</a></li>
+          <li><a href="about.html" class="kb-link">About us</a></li>
           <li><a href="#" class="kb-link">Blog</a></li>
           <li>
             <a
@@ -138,8 +141,8 @@
         </ul>
       </div>
     </nav>
-    <!-- SIMPLE HERO -->
 
+    <!-- SIMPLE HERO -->
     <section
       id="hero"
       class="relative h-screen overflow-hidden bg-neutral-900 text-white"
@@ -157,22 +160,31 @@
 
       <!-- Content -->
       <div
-        class="relative z-10 mx-auto max-w-7xl px-5 md:px-8 lg:px-10 pt-20 md:pt-40 pb-16"
+        class="relative z-10 mx-auto max-w-7xl px-5 md:px-8 lg:px-10 pt-20 md:pt-40 pb-16 text-left"
       >
         <div class="max-w-3xl">
           <h1
             class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight"
+            data-aos="fade-up"
           >
             Deliver industry-leading
             <span class="block">learning & consulting</span>
             <span class="block">services</span>
           </h1>
-          <p class="mt-6 text-base md:text-lg text-white/80 max-w-2xl">
+          <p
+            class="mt-6 text-base md:text-lg text-white/80 max-w-2xl"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             We help organizations grow through practical training and
             consulting— blending data-informed strategy with human-centered
             facilitation.
           </p>
-          <div class="mt-8 flex flex-wrap items-center gap-4">
+          <div
+            class="mt-8 flex flex-wrap items-center gap-4"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
             <a
               href="#services"
               class="group inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-sm md:text-base font-medium backdrop-blur-md transition hover:bg-white/20"
@@ -201,9 +213,10 @@
     <!-- Services Section -->
     <section id="services" class="relative bg-white py-24">
       <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
-        <div class="max-w-3xl mb-14">
+        <!-- Heading -->
+        <div class="max-w-3xl mb-14 text-left" data-aos="fade-up">
           <h2
-            class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight"
+            class="text-2xl md:text-4xl font-bold text-gray-900 leading-tight mb-6 relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:mt-3 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
           >
             Our core services
           </h2>
@@ -215,47 +228,64 @@
 
         <!-- Grid -->
         <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Training -->
           <div
             class="group rounded-2xl bg-gray-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition"
+            data-aos="fade-up"
+            data-aos-delay="0"
           >
             <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800"
+              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
             >
-              📚
+              <i data-lucide="book-open-check" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-3 relative inline-block after:content-[''] after:block after:w-12 after:h-1 after:mt-1 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
+            >
               Training & Workshop
             </h3>
             <p class="text-gray-600 text-sm leading-relaxed">
               Interactive sessions tailored to enhance skills and knowledge
-              across various industries.
+              across industries.
             </p>
           </div>
 
+          <!-- Consulting -->
           <div
             class="group rounded-2xl bg-gray-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition"
+            data-aos="fade-up"
+            data-aos-delay="150"
           >
             <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800"
+              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
             >
-              💼
+              <i data-lucide="briefcase" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">Consulting</h3>
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-3 relative inline-block after:content-[''] after:block after:w-12 after:h-1 after:mt-1 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
+            >
+              Consulting
+            </h3>
             <p class="text-gray-600 text-sm leading-relaxed">
-              Strategic advice and solutions blending data‑informed insights
-              with human‑centered facilitation.
+              Strategic advice and solutions blending data-informed insights
+              with human-centered facilitation.
             </p>
           </div>
 
+          <!-- Coaching -->
           <div
             class="group rounded-2xl bg-gray-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition"
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
             <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800"
+              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
             >
-              🎯
+              <i data-lucide="target" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-3 relative inline-block after:content-[''] after:block after:w-12 after:h-1 after:mt-1 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
+            >
               Coaching & Mentoring
             </h3>
             <p class="text-gray-600 text-sm leading-relaxed">
@@ -264,15 +294,20 @@
             </p>
           </div>
 
+          <!-- Digital Learning -->
           <div
             class="group rounded-2xl bg-gray-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition"
+            data-aos="fade-up"
+            data-aos-delay="450"
           >
             <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800"
+              class="mb-6 h-12 w-12 rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white grid place-items-center"
             >
-              🌐
+              <i data-lucide="monitor-play" class="w-6 h-6"></i>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
+            <h3
+              class="text-xl font-semibold text-gray-900 mb-3 relative inline-block after:content-[''] after:block after:w-12 after:h-1 after:mt-1 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
+            >
               Digital Learning
             </h3>
             <p class="text-gray-600 text-sm leading-relaxed">
@@ -286,8 +321,13 @@
 
     <!-- Clients Section -->
     <section id="clients" class="relative bg-neutral-50 py-20">
-      <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 text-center">
-        <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-12">
+      <div
+        class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 text-center"
+        data-aos="fade-up"
+      >
+        <h2
+          class="text-2xl md:text-4xl font-bold text-gray-900 leading-tight mb-6 relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:mt-3 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500 after:mx-auto"
+        >
           Trusted by leading organizations
         </h2>
         <div
@@ -297,114 +337,153 @@
             src="img/client1-rumah-perubahan.png"
             alt="Client 1"
             class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition"
+            data-aos="zoom-in"
+            data-aos-delay="0"
           />
           <img
             src="img/client2-rs-jih.png"
             alt="Client 2"
             class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition"
+            data-aos="zoom-in"
+            data-aos-delay="100"
           />
           <img
             src="img/client3-BTAM.png"
             alt="Client 3"
             class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition"
+            data-aos="zoom-in"
+            data-aos-delay="200"
           />
           <img
             src="img/client4-bni-corp.png"
             alt="Client 4"
             class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition"
+            data-aos="zoom-in"
+            data-aos-delay="300"
           />
           <img
             src="img/client5-um-metro.png"
             alt="Client 5"
             class="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition"
+            data-aos="zoom-in"
+            data-aos-delay="400"
           />
         </div>
       </div>
     </section>
 
     <!-- Why Choose Us Section -->
-    <section id="why-us" class="relative bg-white py-24">
-      <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
-        <div class="max-w-3xl mb-14 text-center mx-auto">
+    <section id="why" class="relative bg-white py-24">
+      <div
+        class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Left: Illustration -->
+        <div class="relative group overflow-hidden rounded-2xl shadow-lg">
+          <!-- Gambar -->
+          <img
+            src="img/why-choose-us.jpeg"
+            alt="Why choose us illustration"
+            class="w-full object-cover transition-transform duration-500 group-hover:scale-105 max-h-[480px] md:max-h-[560px]"
+          />
+          <!-- Overlay abu-abu -->
+          <div
+            class="absolute inset-0 bg-gray-900/50 translate-y-0 group-hover:-translate-y-full transition-opacity duration-500"
+          ></div>
+        </div>
+
+        <!-- Right: Content -->
+        <div data-aos="fade-left">
           <h2
-            class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight"
+            class="text-2xl md:text-4xl font-bold text-gray-900 leading-tight mb-6 relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:mt-3 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
           >
             Why choose KerjaBaik?
           </h2>
-          <p class="mt-4 text-lg text-gray-600">
-            We combine human-centered facilitation with data-informed strategies
-            to deliver impactful training and consulting.
+          <p class="text-lg text-gray-600 mb-10">
+            We deliver solutions that combine proven methodologies with
+            innovative approaches—empowering both individuals and organizations
+            to thrive in a changing world.
           </p>
-        </div>
 
-        <!-- Grid -->
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-          <div
-            class="group rounded-2xl bg-neutral-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition"
-          >
-            <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800"
-            >
-              🤝
+          <div class="space-y-8">
+            <!-- Item 1 -->
+            <div class="flex items-start gap-4">
+              <div
+                class="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white shadow-md"
+              >
+                <i data-lucide="award" class="h-6 w-6"></i>
+              </div>
+              <div>
+                <h3
+                  class="font-semibold text-gray-900 mb-1 relative inline-block after:content-[''] after:block after:w-10 after:h-[2px] after:mt-1 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
+                >
+                  Proven Expertise
+                </h3>
+                <p class="text-sm text-gray-600">
+                  7+ years delivering impactful training for government, BUMN,
+                  and private companies.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
-              Human-Centered
-            </h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              We focus on people and their real challenges, creating solutions
-              that fit their unique needs.
-            </p>
-          </div>
 
-          <div
-            class="group rounded-2xl bg-neutral-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition"
-          >
-            <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800"
-            >
-              📊
+            <!-- Item 2 -->
+            <div class="flex items-start gap-4">
+              <div
+                class="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white shadow-md"
+              >
+                <i data-lucide="users" class="h-6 w-6"></i>
+              </div>
+              <div>
+                <h3
+                  class="font-semibold text-gray-900 mb-1 relative inline-block after:content-[''] after:block after:w-10 after:h-[2px] after:mt-1 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
+                >
+                  Human-Centered
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Programs designed with empathy, tailored to organizational
+                  needs.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
-              Data-Informed
-            </h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Our strategies are guided by insights and analytics, ensuring
-              measurable outcomes for every project.
-            </p>
-          </div>
 
-          <div
-            class="group rounded-2xl bg-neutral-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition"
-          >
-            <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800"
-            >
-              🛠️
+            <!-- Item 3 -->
+            <div class="flex items-start gap-4">
+              <div
+                class="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white shadow-md"
+              >
+                <i data-lucide="lightbulb" class="h-6 w-6"></i>
+              </div>
+              <div>
+                <h3
+                  class="font-semibold text-gray-900 mb-1 relative inline-block after:content-[''] after:block after:w-10 after:h-[2px] after:mt-1 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
+                >
+                  Innovative Methods
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Cutting-edge approaches and interactive formats to engage
+                  participants effectively.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
-              Practical & Hands-On
-            </h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Every session is designed to be actionable and directly applicable
-              to the workplace.
-            </p>
-          </div>
 
-          <div
-            class="group rounded-2xl bg-neutral-50 p-8 shadow-sm border border-gray-100 hover:shadow-md hover:bg-white transition"
-          >
-            <div
-              class="mb-6 h-12 w-12 rounded-xl bg-gray-900 text-white grid place-items-center group-hover:bg-gray-800"
-            >
-              ⚡
+            <!-- Item 4 -->
+            <div class="flex items-start gap-4">
+              <div
+                class="h-12 w-12 flex items-center justify-center rounded-xl bg-gradient-to-tr from-green-500 to-blue-500 text-white shadow-md"
+              >
+                <i data-lucide="handshake" class="h-6 w-6"></i>
+              </div>
+              <div>
+                <h3
+                  class="font-semibold text-gray-900 mb-1 relative inline-block after:content-[''] after:block after:w-10 after:h-[2px] after:mt-1 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
+                >
+                  Practical & Hands-On
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Every session is designed to be actionable and directly
+                  applicable to the workplace.
+                </p>
+              </div>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">
-              Scalable & Flexible
-            </h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              Suitable for individuals, small teams, or large organizations —
-              scalable to meet any demand.
-            </p>
           </div>
         </div>
       </div>
@@ -415,164 +494,196 @@
       <div
         class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10 grid md:grid-cols-2 gap-12 items-center"
       >
-        <!-- Image side -->
-        <div class="rounded-2xl overflow-hidden shadow-md">
-          <img
-            src="img/activity.png"
-            alt="KerjaBaik Team"
-            class="w-full h-full object-cover"
-          />
-        </div>
-        <!-- Text side -->
-        <div>
+        <!-- Left: Text -->
+        <div data-aos="fade-right">
           <h2
-            class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6"
+            class="text-2xl md:text-4xl font-bold text-gray-900 leading-tight mb-6 relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:mt-3 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
           >
             About KerjaBaik
           </h2>
-          <p class="text-lg text-gray-600 mb-6">
-            KerjaBaik is a training and consulting company dedicated to helping
-            individuals and organizations thrive in today’s workplace. With
-            years of experience, we deliver impactful programs tailored to
-            modern challenges.
+          <p class="text-lg text-gray-600 mb-8">
+            KerjaBaik is a training & consulting company dedicated to helping
+            Generation Z kickstart their careers and thrive in the workplace.
+            With years of expertise, we blend proven methods with modern
+            innovation to deliver real impact.
           </p>
           <a
             href="about.html"
-            class="inline-flex items-center gap-2 rounded-full bg-gray-900 text-white px-6 py-3 text-sm md:text-base font-semibold transition hover:bg-black"
+            class="inline-flex items-center gap-2 rounded-full bg-gray-900 text-white px-6 py-3 font-semibold transition hover:bg-gray-800"
           >
             Learn more
-            <span
-              class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/15"
+            <span class="inline-flex h-5 w-5 items-center justify-center"
               >→</span
             >
           </a>
         </div>
+
+        <!-- Right: Image -->
+        <div
+          class="relative group overflow-hidden rounded-2xl shadow-lg"
+          data-aos="fade-left"
+        >
+          <img
+            src="img/activity.png"
+            alt="About KerjaBaik"
+            class="w-full object-cover transition-transform duration-500 group-hover:scale-105 max-h-[480px] md:max-h-[560px]"
+          />
+          <!-- Overlay abu-abu -->
+          <div
+            class="absolute inset-0 bg-gray-900/40 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+          ></div>
+        </div>
       </div>
     </section>
 
-    <!-- Blog/Insights Section -->
+    <!-- Blog Snapshot Section -->
     <section id="blog" class="relative bg-white py-24">
       <div class="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
-        <div class="max-w-3xl mb-14 text-center mx-auto">
+        <!-- Heading -->
+        <div class="max-w-2xl mb-14 text-left" data-aos="fade-up">
           <h2
-            class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight"
+            class="text-2xl md:text-4xl font-bold text-gray-900 leading-tight mb-6 relative inline-block after:content-[''] after:block after:w-16 after:h-1 after:mt-3 after:rounded-full after:bg-gradient-to-r after:from-green-500 after:to-blue-500"
           >
             Insights & Resources
           </h2>
           <p class="mt-4 text-lg text-gray-600">
-            Explore our latest thoughts, tips, and strategies on training,
-            consulting, and workplace growth.
+            Latest articles and resources to help you grow your career.
           </p>
         </div>
 
-        <!-- Grid -->
-        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          <div
-            class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition"
-          >
-            <img
-              src="img/pelatihan-img.jpg"
-              alt="Blog 1"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <span class="text-sm text-gray-500">Training</span>
-              <h3
-                class="text-xl font-semibold text-gray-900 mt-2 mb-3 group-hover:text-gray-700 transition"
+        <!-- Grid 3 Blog Cards -->
+        <div class="grid gap-10 md:grid-cols-3">
+          <!-- Blog Card 1 -->
+          <div data-aos="fade-up" data-aos-delay="0">
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+              <img
+                src="img/pelatihan-img.jpg"
+                alt="Blog 1"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gray-900/40 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+              ></div>
+            </div>
+            <div class="mt-4">
+              <span class="text-sm text-green-600 font-medium"
+                >Career Tips</span
               >
-                5 Tips to Improve Team Performance
+              <h3 class="mt-2 text-lg font-semibold text-gray-900">
+                How Gen Z Can Thrive in the Workplace
               </h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                Discover practical approaches to boost productivity and
-                collaboration across your team.
+              <p class="mt-2 text-gray-600 text-sm">
+                Discover strategies and skills to adapt and succeed in today’s
+                competitive job market.
               </p>
               <a
                 href="#"
-                class="text-sm font-medium text-gray-900 hover:underline"
+                class="mt-3 inline-block text-sm font-semibold text-green-600 hover:underline"
                 >Read more →</a
               >
             </div>
           </div>
 
-          <div
-            class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition"
-          >
-            <img
-              src="img/pelatihan-img-2.png"
-              alt="Blog 2"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <span class="text-sm text-gray-500">Leadership</span>
-              <h3
-                class="text-xl font-semibold text-gray-900 mt-2 mb-3 group-hover:text-gray-700 transition"
-              >
-                The Future of Workplace Learning
+          <!-- Blog Card 2 -->
+          <div data-aos="fade-up" data-aos-delay="150">
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+              <img
+                src="img/pelatihan-img-2.png"
+                alt="Blog 2"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gray-900/40 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+              ></div>
+            </div>
+            <div class="mt-4">
+              <span class="text-sm text-green-600 font-medium">Leadership</span>
+              <h3 class="mt-2 text-lg font-semibold text-gray-900">
+                Building Effective Multigenerational Teams
               </h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                How organizations can adapt and thrive with continuous learning
-                in a hybrid environment.
+              <p class="mt-2 text-gray-600 text-sm">
+                Learn how leaders can foster collaboration across Gen Z,
+                Millennials, and beyond.
               </p>
               <a
                 href="#"
-                class="text-sm font-medium text-gray-900 hover:underline"
+                class="mt-3 inline-block text-sm font-semibold text-green-600 hover:underline"
                 >Read more →</a
               >
             </div>
           </div>
 
-          <div
-            class="group rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition"
-          >
-            <img
-              src="img/slide 2.jpg"
-              alt="Blog 3"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <span class="text-sm text-gray-500">Consulting</span>
-              <h3
-                class="text-xl font-semibold text-gray-900 mt-2 mb-3 group-hover:text-gray-700 transition"
+          <!-- Blog Card 3 -->
+          <div data-aos="fade-up" data-aos-delay="300">
+            <div class="group relative overflow-hidden rounded-2xl shadow-lg">
+              <img
+                src="img/slide 2.jpg"
+                alt="Blog 3"
+                class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gray-900/40 opacity-100 group-hover:opacity-0 transition-opacity duration-500"
+              ></div>
+            </div>
+            <div class="mt-4">
+              <span class="text-sm text-green-600 font-medium"
+                >Productivity</span
               >
-                How to Build Resilient Leaders
+              <h3 class="mt-2 text-lg font-semibold text-gray-900">
+                Time Management Skills for Gen Z Professionals
               </h3>
-              <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                Learn the essential skills leaders need to navigate uncertainty
-                and drive sustainable growth.
+              <p class="mt-2 text-gray-600 text-sm">
+                Practical techniques to help young professionals balance
+                priorities and reduce stress.
               </p>
               <a
                 href="#"
-                class="text-sm font-medium text-gray-900 hover:underline"
+                class="mt-3 inline-block text-sm font-semibold text-green-600 hover:underline"
                 >Read more →</a
               >
             </div>
           </div>
+        </div>
+
+        <!-- CTA Blog Snapshot -->
+        <div class="mt-12 text-center" data-aos="fade-up">
+          <a
+            href="blog.html"
+            class="inline-flex items-center gap-2 rounded-full bg-gray-900 text-white px-6 py-3 font-semibold transition hover:bg-gray-800"
+          >
+            View all insights
+          </a>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
     <section
-      id="cta"
-      class="relative bg-neutral-900 py-24 text-white text-center"
+      id="contact"
+      class="relative bg-gradient-to-r from-neutral-950 via-neutral-900 to-neutral-950 py-24 text-white"
     >
-      <div class="mx-auto max-w-3xl px-5 md:px-8">
-        <h2 class="text-3xl md:text-5xl font-extrabold leading-tight mb-6">
-          Ready to elevate your people and organization?
+      <div
+        class="mx-auto max-w-3xl px-5 md:px-8 text-center"
+        data-aos="fade-up"
+      >
+        <h2
+          class="text-3xl md:text-5xl font-extrabold leading-tight mb-6 relative inline-block"
+        >
+          Ready to transform your people & organization?
+          <span
+            class="block h-1 w-20 mx-auto mt-3 rounded-full bg-gradient-to-r from-green-500 to-blue-500"
+          ></span>
         </h2>
-        <p class="text-lg text-white/80 mb-10">
-          Let’s collaborate to design training and consulting solutions that
-          drive real growth and impact.
+        <p class="text-lg text-gray-300 mb-10">
+          Let’s discuss how KerjaBaik can design training & consulting solutions
+          tailored for your goals.
         </p>
         <a
-          href="#contact"
-          class="inline-flex items-center gap-2 rounded-full bg-white text-neutral-900 px-8 py-4 text-base md:text-lg font-semibold transition hover:bg-neutral-100"
+          href="contact.html"
+          class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-green-500 to-blue-500 px-8 py-3 font-semibold text-white shadow-lg transition hover:opacity-90"
         >
-          Get in Touch
-          <span
-            class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-neutral-900 text-white"
-            >→</span
-          >
+          Contact Us
+          <span class="inline-flex h-5 w-5 items-center justify-center">→</span>
         </a>
       </div>
     </section>
@@ -604,9 +715,9 @@
         <div>
           <h4 class="text-lg font-semibold mb-4">Navigation</h4>
           <ul class="space-y-2 text-sm text-white/70">
-            <li><a href="#services" class="hover:text-white">Services</a></li>
-            <li><a href="#about" class="hover:text-white">About</a></li>
-            <li><a href="#blog" class="hover:text-white">Blog</a></li>
+            <li><a href="services.html" class="hover:text-white">Services</a></li>
+            <li><a href="about.html" class="hover:text-white">About</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
           </ul>
         </div>
 
@@ -628,7 +739,6 @@
           </ul>
         </div>
 
-        <!-- Social (icons) -->
         <!-- Social (icons) -->
         <div>
           <h4 class="text-lg font-semibold mb-4">Follow us</h4>
@@ -715,6 +825,14 @@
       const b = document.getElementById("kb-burger");
       const d = document.getElementById("kb-drawer");
       b?.addEventListener("click", () => d.classList.toggle("hidden"));
+    </script>
+
+    <!-- JS AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      lucide?.createIcons?.();
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
     <!-- JS for dynamic year -->

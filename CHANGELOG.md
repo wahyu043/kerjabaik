@@ -1,5 +1,24 @@
 # KerjaBaik Website Changelog
 
+## v5.0.0 – 2025-09-07
+
+### Diperbarui – Homepage Refactor Layout & Animation
+
+- Integrasi **AOS (Animate On Scroll)** di homepage.
+- Hero section: animasi fade-up pada heading & subtext, zoom-in pada tombol CTA.
+- Services section: update pakai **Lucide icons**, garis accent di subjudul, animasi fade-up staggered pada tiap card.
+- Clients section: logo dengan efek grayscale → full color saat hover, animasi zoom-in staggered.
+- Why Choose KerjaBaik: layout zig-zag (gambar kiri, teks kanan), efek hover overlay abu-abu + zoom tipis, 4 value props dengan icon (`award`, `users`, `lightbulb`, `handshake`).
+- About Snapshot: layout zig-zag (gambar kanan, teks kiri), efek hover overlay abu-abu + zoom tipis, tombol _Learn more_.
+- Blog Snapshot: heading kiri, grid 3 card, hover fade + zoom, CTA “View all insights”.
+- CTA Section: senada dengan halaman About (background gradient gelap, accent line, tombol gradient).
+- Konsistensi heading h2: ditambahkan garis accent bawah (opsional kiri/tengah) untuk section utama (Services, Why, About, Blog).
+
+### Catatan
+
+- Seluruh section homepage sekarang konsisten dengan halaman lain dari segi animasi & gaya visual.
+- Next target: refactor halaman **Services**.
+
 ## v4.0.0 – 2025-09-06
 
 ### Ditambahkan - Halaman Contact
