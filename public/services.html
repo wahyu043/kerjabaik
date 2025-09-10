@@ -81,6 +81,26 @@
           <i data-lucide="menu" class="h-6 w-6 text-gray-800"></i>
         </button>
       </div>
+
+      <!-- Mobile drawer -->
+      <div
+        id="kb-drawer"
+        class="hidden md:hidden border-t border-gray-200 bg-white/95 backdrop-blur"
+      >
+        <ul class="px-4 py-4 space-y-2">
+          <li><a href="services.html" class="kb-link">Services</a></li>
+          <li><a href="about.html" class="kb-link">About Us</a></li>
+          <li><a href="#" class="kb-link">Blog</a></li>
+          <li>
+            <a
+              href="contact.html"
+              class="mt-2 inline-flex items-center justify-center w-full py-2 rounded-full bg-gray-900 text-white"
+            >
+              Contact us →
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero Services -->
@@ -570,6 +590,15 @@
       </div>
     </section>
 
+    <!-- Swipe Up Button -->
+    <button
+      id="swipeUp"
+      class="fixed bottom-6 right-6 z-50 hidden p-3 rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white shadow-lg hover:scale-110 transition"
+      aria-label="Back to top"
+    >
+      ↑
+    </button>
+
     <!-- Footer -->
     <footer class="relative bg-neutral-950 text-white pt-16 pb-8">
       <div
@@ -616,10 +645,7 @@
               >
             </li>
             <li>
-              <a
-                href="#"
-                target="_blank"
-                class="hover:text-white"
+              <a href="#" target="_blank" class="hover:text-white"
                 >+62 123-456-789</a
               >
             </li>
@@ -682,6 +708,25 @@
         © <span id="year"></span> KerjaBaik. All rights reserved.
       </div>
     </footer>
+
+    <!-- JS Swipe Up Button -->
+    <script>
+      const swipeBtn = document.getElementById("swipeUp");
+
+      // Tampilkan tombol kalau scroll lebih dari 300px
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          swipeBtn.classList.remove("hidden");
+        } else {
+          swipeBtn.classList.add("hidden");
+        }
+      });
+
+      // Klik → smooth scroll ke atas
+      swipeBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
 
     <!-- JS Navbar -->
     <script>

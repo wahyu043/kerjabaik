@@ -688,6 +688,15 @@
       </div>
     </section>
 
+    <!-- Swipe Up Button -->
+    <button
+      id="swipeUp"
+      class="fixed bottom-6 right-6 z-50 hidden p-3 rounded-full bg-gradient-to-r from-green-500 to-blue-500 text-white shadow-lg hover:scale-110 transition"
+      aria-label="Back to top"
+    >
+      ↑
+    </button>
+
     <!-- Footer -->
     <footer class="relative bg-neutral-950 text-white pt-16 pb-8">
       <div
@@ -797,6 +806,25 @@
         © <span id="year"></span> KerjaBaik. All rights reserved.
       </div>
     </footer>
+
+    <!-- JS Swipe Up Button -->
+    <script>
+      const swipeBtn = document.getElementById("swipeUp");
+
+      // Tampilkan tombol kalau scroll lebih dari 300px
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          swipeBtn.classList.remove("hidden");
+        } else {
+          swipeBtn.classList.add("hidden");
+        }
+      });
+
+      // Klik → smooth scroll ke atas
+      swipeBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
 
     <!-- JS Navbar -->
     <script>
